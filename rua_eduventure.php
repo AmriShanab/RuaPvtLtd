@@ -1,11 +1,11 @@
 <?php
-include '../layouts/navbar.php';
+include 'navbar.php';
 ?>
 
 <div class="hero-section">
     <video autoplay muted loop playsinline class="hero-video">
         <!-- Primary video source -->
-        <source src="../assets/videos/sample_background.mp4" type="video/mp4">
+        <source src="assets/videos/sample_background.mp4" type="video/mp4">
 
         <!-- Fallback video source -->
         <source src="https://pixabay.com/videos/download/video-45707_large.mp4" type="video/mp4">
@@ -20,7 +20,7 @@ include '../layouts/navbar.php';
 </div>
 
 <?php
-include '../packages/world_map.php';
+include 'packages/world_map.php';
 ?>
 
 <div class="partner-universities-section">
@@ -132,10 +132,10 @@ include '../packages/world_map.php';
 </div>
 
 <?php
-    include '../layouts/footer.php';
+    include 'footer.php';
 ?>
 
-<script src="../assets/js/rua_eduventure.js"></script>
+<script src="assets/js/rua_eduventure.js"></script>
 <script>
     const universities = [
         "RMIT University",
@@ -158,23 +158,23 @@ include '../packages/world_map.php';
     ];
 
     const universityLogos = {
-        "RMIT University": "../assets/images/logos/rmit-logo.png",
-        "Middlesex University (MDX)": "../assets/images/logos/mdx-logo.png",
-        "Deakin University": "../assets/images/logos/deakin-logo.png",
-        "La Trobe University": "../assets/images/logos/latrobe-logo.png",
-        "University of Tasmania": "../assets/images/logos/tasmania-logo.png",
-        "University of New South Wales": "../assets/images/logos/unsw-logo.png",
-        "Coventry University": "../assets/images/logos/coventry-logo.png",
-        "Heriot-Watt University": "../assets/images/logos/heriotwatt-logo.png",
-        "University of Law": "../assets/images/logos/law-logo.png",
-        "Anglia Ruskin University": "../assets/images/logos/anglia-logo.png",
-        "Teeside University": "../assets/images/logos/teeside-logo.png",
-        "Auckland University of Technology": "../assets/images/logos/aut-logo.png",
-        "University of Waikato": "../assets/images/logos/waikato-logo.png",
-        "ICN Business School": "../assets/images/logos/icn-logo.png",
-        "Emirates Maritime Academy (EMA)": "../assets/images/logos/ema-logo.png",
-        "Curtin University Dubai": "../assets/images/logos/curtin-logo.png",
-        "University of Hertfordshire": "../assets/images/logos/hertfordshire-logo.png"
+        "RMIT University": "assets/images/logos/rmit-logo.png",
+        "Middlesex University (MDX)": "assets/images/logos/mdx-logo.png",
+        "Deakin University": "assets/images/logos/deakin-logo.png",
+        "La Trobe University": "assets/images/logos/latrobe-logo.png",
+        "University of Tasmania": "assets/images/logos/tasmania-logo.png",
+        "University of New South Wales": "assets/images/logos/unsw-logo.png",
+        "Coventry University": "assets/images/logos/coventry-logo.png",
+        "Heriot-Watt University": "assets/images/logos/heriotwatt-logo.png",
+        "University of Law": "assets/images/logos/law-logo.png",
+        "Anglia Ruskin University": "assets/images/logos/anglia-logo.png",
+        "Teeside University": "assets/images/logos/teeside-logo.png",
+        "Auckland University of Technology": "assets/images/logos/aut-logo.png",
+        "University of Waikato": "assets/images/logos/waikato-logo.png",
+        "ICN Business School": "assets/images/logos/icn-logo.png",
+        "Emirates Maritime Academy (EMA)": "assets/images/logos/ema-logo.png",
+        "Curtin University Dubai": "assets/images/logos/curtin-logo.png",
+        "University of Hertfordshire": "assets/images/logos/hertfordshire-logo.png"
     };
 
     const testimonials = [{

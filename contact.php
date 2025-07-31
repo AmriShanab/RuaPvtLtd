@@ -1,5 +1,5 @@
 <?php
-include '../layouts/navbar.php';
+include 'navbar.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ include '../layouts/navbar.php';
     <div class="hero-section">
     <video autoplay muted loop playsinline class="hero-video">
         <!-- Primary video source -->
-        <source src="../assets/videos/sample_background.mp4" type="video/mp4">
+        <source src="assets/videos/sample_background.mp4" type="video/mp4">
 
         <!-- Fallback video source -->
         <source src="https://pixabay.com/videos/download/video-45707_large.mp4" type="video/mp4">
@@ -169,4 +169,7 @@ include '../layouts/navbar.php';
         });
     </script>
 </body>
+<?php
+include 'footer.php';
+?>
 </html>

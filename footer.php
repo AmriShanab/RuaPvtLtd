@@ -1,12 +1,12 @@
 <head>
-    <link rel="stylesheet" href="../assets/styles/footer.css    ">
+    <link rel="stylesheet" href="assets/styles/footer.css    ">
 </head>
 <footer class="site-footer">
   <!-- <div class="footer-wave"></div> -->
   
   <div class="footer-container">
     <div class="footer-brand">
-      <img src="../assets/images/Logo.pdf.png" alt="Rua Logo" class="footer-logo">
+      <img src="assets/images/Logo.pdf.png" alt="Rua Logo" class="footer-logo">
       <p class="footer-tagline">No noise. Just quality, intention, and calm.</p>
       <div class="footer-social">
         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
