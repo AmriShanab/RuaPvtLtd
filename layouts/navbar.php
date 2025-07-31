@@ -32,7 +32,7 @@
                 </a>
             </div>
             <ul class="navbar-links" id="navbarLinks">
-                <li><a href="../pages/home.php" data-text="Home" class="cinzel-font">Home</a></li>
+                <li><a href="../index.php" data-text="Home" class="cinzel-font">Home</a></li>
                 <li><a href="../pages/rua_eduventure.php" data-text="Rua Eduventure" class="cinzel-font">Rua Eduventure</a></li>
                 <li><a href="#" data-text="Rua El Oud" class="cinzel-font">Rua El Oud</a></li>
                 <li><a href="#" data-text="Rua Recreation" class="cinzel-font">Rua Recreation</a></li>
