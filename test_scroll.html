@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll Blur Animation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: white;
+      height: 200vh; /* Makes page scrollable */
+    }
+
+    .screen-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 200px auto;
+      background: #222;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #444;
+    }
+
+    .blur-mask-top,
+    .blur-mask-bottom {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .blur-mask-top {
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    }
+
+    .blur-mask-bottom {
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+
+    .element {
+      position: absolute;
+      left: 10%;
+      top: 100%;
+      width: 80%;
+      height: 100px;
+      background: white;
+      color: black;
+      text-align: center;
+      line-height: 100px;
+      border-radius: 12px;
+      transform: translateY(0);
+      opacity: 0;
+      filter: blur(10px);
+      transition: all 1s ease;
+    }
+
+    .element.visible {
+      top: 80px;
+      opacity: 1;
+      filter: blur(0px);
+    }
+
+    .element.exit {
+      top: -150px;
+      opacity: 0;
+      filter: blur(10px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-container">
+    <div class="blur-mask-top"></div>
+    <div class="blur-mask-bottom"></div>
+    <div class="element" id="animatedElement">I'm Blurring In/Out</div>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const element = entry.target;
+
+        if (entry.isIntersecting) {
+          element.classList.add("visible");
+          element.classList.remove("exit");
+        } else {
+          element.classList.remove("visible");
+          element.classList.add("exit");
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const animatedEl = document.getElementById("animatedElement");
+    observer.observe(animatedEl);
+  </script>
+</body>
+</html>
