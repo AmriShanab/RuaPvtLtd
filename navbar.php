@@ -1,3 +1,7 @@
+<?php
+  $currentPage = basename($_SERVER['PHP_SELF']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,26 +29,27 @@
         </div>
     </div>
 
-    <header class="navbar-container">
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <a href="#" class="logo-link">
-                    <img src="assets/images/Logo.pdf.png" alt="Rua" class="logo-img">
-                </a>
-            </div>
-            <ul class="navbar-links" id="navbarLinks">
-                <li><a href="index.php" data-text="Home" class="cinzel-font">Home</a></li>
-                <li><a href="rua_eduventure.php" data-text="Rua Eduventure" class="cinzel-font">Rua Eduventure</a></li>
-                <li><a href="#" data-text="Rua El Oud" class="cinzel-font">Rua El Oud</a></li>
-                <li><a href="#" data-text="Rua Recreation" class="cinzel-font">Rua Recreation</a></li>
-                <li><a href="about.php" data-text="About Us" class="cinzel-font">About Us</a></li>
-                <li><a href="contact.php" data-text="Contact" class="cinzel-font">Contact</a></li>
-            </ul>
-            <button class="navbar-toggle" id="navbarToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
+ <header class="navbar-container">
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.php" class="logo-link">
+        <img src="assets/images/Logo.pdf.png" alt="Rua" class="logo-img">
+      </a>
+    </div>
+   <ul class="navbar-links" id="navbarLinks">
+  <li><a href="index.php" class="cinzel-font <?= ($currentPage === 'index.php') ? 'active-link' : '' ?>">Home</a></li>
+  <li><a href="rua_eduventure.php" class="cinzel-font <?= ($currentPage === 'rua_eduventure.php') ? 'active-link' : '' ?>">Rua Eduventure</a></li>
+  <li><a href="#" class="cinzel-font">Rua El Oud</a></li>
+  <li><a href="#" class="cinzel-font">Rua Recreation</a></li>
+  <li><a href="about.php" class="cinzel-font <?= ($currentPage === 'about.php') ? 'active-link' : '' ?>">About Us</a></li>
+  <li><a href="contact.php" class="cinzel-font <?= ($currentPage === 'contact.php') ? 'active-link' : '' ?>">Contact</a></li>
+</ul>
+
+    <button class="navbar-toggle" id="navbarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+</header>
 
     
 

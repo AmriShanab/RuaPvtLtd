@@ -297,6 +297,11 @@ body {
   transition: transform 0.3s ease-out;
 }
 
+.navbar-links a.active {
+  border-bottom: 2px solid var(--gold); /* or any highlight */
+  color: var(--gold); /* optional */
+}
+
 .navbar-links a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
