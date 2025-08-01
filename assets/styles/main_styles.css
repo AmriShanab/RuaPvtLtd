@@ -38,7 +38,7 @@ body {
   pointer-events: none;
 }
 
-.top-blur {
+/* .top-blur {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,9 +47,21 @@ body {
   background-color: rgba(255, 255, 255, 0.15);
   pointer-events: none;
   z-index: 10;
+} */
+
+.top-blur {
+  top: 0;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
+  z-index: 10;
 }
 
-.bottom-blur {
+/* .bottom-blur {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -57,6 +69,18 @@ body {
   height: 100px;
   background-color: rgba(255, 255, 255, 0.15);
   pointer-events: none;
+  z-index: 10;
+} */
+
+.bottom-blur {
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
   z-index: 10;
 }
 
