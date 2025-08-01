@@ -28,6 +28,41 @@ body {
   box-sizing: border-box;
 }
 
+/* Blur Overlays */
+.blur-overlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.top-blur {
+  top: 0;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
+  z-index: 10;
+}
+
+.bottom-blur {
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
+  z-index: 10;
+}
+
+
 .loader-wrapper {
   position: fixed;
   top: 0;

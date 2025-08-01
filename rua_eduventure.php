@@ -1,7 +1,8 @@
 <?php
 include 'navbar.php';
 ?>
-
+<div class="blur-overlay top-blur"></div>
+<div class="blur-overlay bottom-blur"></div>
 <div class="hero-section">
     <video autoplay muted loop playsinline class="hero-video">
         <!-- Primary video source -->
@@ -34,11 +35,11 @@ include 'packages/world_map.php';
     <div class="testimonial-curve"></div>
     <h2 class="section-title">Student Experiences</h2>
     <p class="section-subtitle">Hear from our global scholars</p>
-    
+
     <div class="testimonials-container">
         <!-- Testimonial cards will be added here -->
     </div>
-    
+
     <div class="google-badge">
         <img src="../assets/images/google-review-badge.png" alt="Google Reviews" width="150">
         <span>4.9/5 from 287+ reviews</span>
@@ -50,7 +51,7 @@ include 'packages/world_map.php';
         <h2 class="section-title">Visa & Immigration Alerts</h2>
         <p class="section-subtitle">Latest updates for your study destination</p>
     </div>
-    
+
     <div class="alert-cards-container">
         <!-- UK Alert -->
         <div class="alert-card autoBlur" data-country="uk">
@@ -65,11 +66,11 @@ include 'packages/world_map.php';
             <a href="https://www.gov.uk/student-visa" target="_blank" class="alert-button">
                 View Requirements
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
         </div>
-        
+
         <!-- Australia Alert -->
         <div class="alert-card autoBlur" data-country="australia">
             <div class="country-flag">
@@ -83,11 +84,11 @@ include 'packages/world_map.php';
             <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500" target="_blank" class="alert-button">
                 View Requirements
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
         </div>
-        
+
         <!-- New Zealand Alert -->
         <div class="alert-card autoBlur" data-country="newzealand">
             <div class="country-flag">
@@ -101,11 +102,11 @@ include 'packages/world_map.php';
             <a href="https://shorturl.at/kZxkc" target="_blank" class="alert-button">
                 View Requirements
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
         </div>
-        
+
         <!-- USA Alert -->
         <div class="alert-card autoBlur" data-country="usa">
             <div class="country-flag">
@@ -119,12 +120,12 @@ include 'packages/world_map.php';
             <a href="https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html" target="_blank" class="alert-button">
                 View Requirements
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
         </div>
     </div>
-    
+
     <div class="alerts-footer">
         <p>For personalized visa assistance, contact our immigration experts</p>
         <a href="/contact" class="consultation-button">Book Free Consultation</a>
@@ -132,7 +133,7 @@ include 'packages/world_map.php';
 </div>
 
 <?php
-    include 'footer.php';
+include 'footer.php';
 ?>
 
 <script src="assets/js/rua_eduventure.js"></script>

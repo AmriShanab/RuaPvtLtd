@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll Blur Effect</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.content {
+  padding: 100px 20px;
+}
+
+.box {
+  margin: 50px 0;
+  background-color: #eee;
+  padding: 40px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Blur Overlays */
+.blur-overlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.top-blur {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+  backdrop-filter: blur(2px);
+}
+
+.bottom-blur {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+  backdrop-filter: blur(2px);
+}
+
+  </style>
+</head>
+<body>
+  <div class="blur-overlay top-blur"></div>
+  <div class="blur-overlay bottom-blur"></div>
+
+  <div class="content">
+    <div class="box">Section 1</div>
+    <div class="box">Section 2</div>
+    <div class="box">Section 3</div>
+    <div class="box">Section 4</div>
+    <div class="box">Section 5</div>
+    <div class="box">Section 6</div>
+  </div>
+</body>
+</html>

@@ -253,14 +253,14 @@
 
 
         <!-- Text SECOND (goes to right) -->
-        <div class="text-column autoBlur">
+        <div class="text-column ">
             <h1 class="cinzel-font">Explore Study Abroad Destinations</h1>
             <p>Embark on an educational journey across the globe. Our premier study abroad programs offer unparalleled opportunities in some of the world's most sought-after destinations.</p>
             <p>Click on any destination marker to learn more about our programs in that location. From the historic universities of Europe to the innovative institutions of Australia and New Zealand, your academic adventure awaits.</p>
             <p>Our expert advisors will guide you through every step of the process, ensuring you find the perfect program to match your academic goals and personal interests.</p>
         </div>
 
-        <div class="map-column autoBlur">
+        <div class="map-column ">
             <div class="map-container">
                 <div id="world-map"></div>
                 <div class="map-tooltip" id="map-tooltip"></div>

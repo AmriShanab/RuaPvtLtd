@@ -164,7 +164,6 @@ include 'navbar.php';
             
             window.location.href = `mailto:amrishanab@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
             
-            // Optional: Show confirmation message
             alert('Thank you for your message! Your email client will now open.');
         });
     </script>
