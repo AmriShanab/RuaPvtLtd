@@ -1,0 +1,359 @@
+:root {
+    --maroon-about: #220000;
+    --beige-about: #ccc0b2;
+    --off-white-about: #f8f9f7;
+    --dark-grey-about: #333333;
+    --gold-about: #FFD700;
+    --light-gold-about: #FFECB3;
+}
+
+/* --- ABOUT PAGE GENERAL STYLES --- */
+.about-page {
+    background-color: var(--off-white-about);
+    padding-top: 120px; /* Space for fixed navbar */
+}
+
+.journey-section-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.page-title-about {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 4em;
+    color: var(--maroon-about);
+    margin: 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    opacity: 0; /* Hidden for reveal animation */
+    animation: fadeSlideUpAbout 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.page-title-about::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--gold-about);
+    border-radius: 2px;
+}
+
+/* --- MAIN TEXT BLOCKS --- */
+.intro-text-about,
+.philosophy-text-about {
+    /* font-family: 'Cinzel', serif; */
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    text-align: center;
+    color: var(--dark-grey-about);
+}
+
+.philosophy-text-about {
+    font-weight: 600;
+    color: var(--maroon-about);
+}
+
+/* --- THE THREE PILLARS LAYOUT --- */
+.pillars-container-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.pillar-card-about {
+    background-color: var(--beige-about);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-card-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.pillar-card-about:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-card-about:hover::before {
+    opacity: 1;
+}
+
+.pillar-icon-about {
+    font-size: 3.5em;
+    color: var(--maroon-about);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-out;
+}
+
+.pillar-card-about:hover .pillar-icon-about {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.pillar-title-about {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--maroon-about);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pillar-description-about {
+    /* font-family: 'Cinzel', serif; */
+    color: var(--dark-grey-about);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- SCROLL REVEAL ANIMATIONS (JS-driven) --- */
+.reveal-about {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-about.is-visible-about {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframe for initial page title fade-in */
+@keyframes fadeSlideUpAbout {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- NEW SECTIONS: VISION & MISSION --- */
+.section-title-about {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 3em;
+    color: var(--maroon-about);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.vision-section-about {
+    background-color: var(--beige-about);
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vision-statement-about {
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    padding: 40px;
+    /* font-family: 'Cinzel', serif; */
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--dark-grey-about);
+    border-left: 3px solid var(--gold-about);
+    border-right: 3px solid var(--gold-about);
+    line-height: 1.6;
+}
+
+.mission-section-about {
+    background-color: var(--off-white-about);
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-container-about {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.mission-item-about {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    background-color: var(--beige-about);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.mission-item-about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon-about {
+    font-size: 2.5em;
+    color: var(--maroon-about);
+    min-width: 50px;
+    text-align: center;
+}
+
+.mission-text-about {
+    /* font-family: 'Cinzel', serif; */
+    font-size: 1.1em;
+    color: var(--dark-grey-about);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- NEW SECTION: OUR VALUES --- */
+.values-section-about {
+    background-color: var(--off-white-about);
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.values-container-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.value-item-about {
+    background-color: var(--beige-about);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.value-item-about:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.value-number-about {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--maroon-about);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.value-content-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.value-title-about {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 1.5em;
+    color: var(--maroon-about);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.value-description-about {
+    /* font-family: 'Cinzel', serif; */
+    font-size: 1em;
+    color: var(--dark-grey-about);
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .journey-section-about {
+        padding: 40px 5%;
+    }
+    .page-title-about {
+        font-size: 3em;
+    }
+    .pillars-container-about,
+    .values-container-about {
+        grid-template-columns: 1fr;
+    }
+    .pillar-card-about {
+        padding: 30px;
+    }
+    .vision-statement-about {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title-about {
+        font-size: 2.5em;
+    }
+    .intro-text-about,
+    .philosophy-text-about,
+    .mission-text-about,
+    .value-description-about {
+        font-size: 1em;
+    }
+    .pillar-icon-about {
+        font-size: 3em;
+    }
+    .pillar-title-about {
+        font-size: 1.5em;
+    }
+    .mission-item-about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .mission-icon-about {
+        margin-bottom: 10px;
+    }
+    .values-section-about {
+        gap: 40px;
+    }
+    .value-item-about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .value-number-about {
+        font-size: 2.5em;
+    }
+}

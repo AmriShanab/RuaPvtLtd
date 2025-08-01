@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/styles/rua_eduvanture.css">
     <link rel="stylesheet" href="assets/styles/contact.css">
     <link rel="stylesheet" href="assets/styles/partners.css">
+    <link rel="stylesheet" href="assets/styles/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@
                 <li><a href="rua_eduventure.php" data-text="Rua Eduventure" class="cinzel-font">Rua Eduventure</a></li>
                 <li><a href="#" data-text="Rua El Oud" class="cinzel-font">Rua El Oud</a></li>
                 <li><a href="#" data-text="Rua Recreation" class="cinzel-font">Rua Recreation</a></li>
-                <li><a href="#" data-text="About Us" class="cinzel-font">About Us</a></li>
+                <li><a href="about.php" data-text="About Us" class="cinzel-font">About Us</a></li>
                 <li><a href="contact.php" data-text="Contact" class="cinzel-font">Contact</a></li>
             </ul>
             <button class="navbar-toggle" id="navbarToggle">
