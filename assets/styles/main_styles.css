@@ -36,6 +36,8 @@ body {
   height: 100px;
   z-index: 10;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* .top-blur {
@@ -82,6 +84,11 @@ body {
   -webkit-backdrop-filter: blur(6px);
   background: transparent;
   z-index: 10;
+}
+
+.top-blur.visible,
+.bottom-blur.visible {
+  opacity: 1;
 }
 
 

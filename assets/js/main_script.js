@@ -95,6 +95,27 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((el) => observer.observe(el));
   };
 
+  // Select blur elements
+  const topBlur = document.querySelector(".top-blur");
+  const bottomBlur = document.querySelector(".bottom-blur");
+
+  let scrollTimeout;
+
+  window.addEventListener("scroll", () => {
+    // Show blur overlays on scroll
+    topBlur.classList.add("visible");
+    bottomBlur.classList.add("visible");
+
+    // Clear any previous timeout
+    clearTimeout(scrollTimeout);
+
+    // Hide overlays 300ms after scrolling stops
+    scrollTimeout = setTimeout(() => {
+      topBlur.classList.remove("visible");
+      bottomBlur.classList.remove("visible");
+    }, 300);
+  });
+
   // Initialize all
   initLoader();
   setupEventListeners();
