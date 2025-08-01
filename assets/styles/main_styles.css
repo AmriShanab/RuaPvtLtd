@@ -39,12 +39,31 @@ body {
 }
 
 .top-blur {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bottom-blur {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 10;
 }
 
 
-.bottom-blur {
+
+
+/* .bottom-blur {
   bottom: 0;
   height: 100px;
   width: 100%;
@@ -53,9 +72,9 @@ body {
   /* backdrop-filter: blur(6px); */
   /* -webkit-backdrop-filter: blur(6px); */
   /* background: transparent; */
-  background-color: rgba(255, 255, 255, 0.2);
-  z-index: 10;
-}
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  /* z-index: 10; */
+/* } */
 
 
 .loader-wrapper {
