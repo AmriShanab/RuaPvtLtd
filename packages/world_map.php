@@ -383,18 +383,18 @@
                     .append("path")
                     .attr("class", "country")
                     .attr("d", path)
-                    .attr("fill", "#D2691E") // Uniform chocolate color
-                    .attr("stroke", "#5D1916") // Dark brown border
+                    .attr("fill", "#A9A9A9") // Gray land
+                    .attr("stroke", "#696969") // Dim gray border
                     .attr("stroke-width", 0.5)
                     .on("mouseover", function() {
                         d3.select(this)
-                            .attr("fill", "#A0522D") // Lighter brown on hover
-                            .attr("stroke-width", 1.5); // Thicker border
+                            .attr("fill", "#D3D3D3") // Light gray on hover
+                            .attr("stroke-width", 1.2); // Slightly thicker border
                     })
                     .on("mouseout", function() {
                         d3.select(this)
-                            .attr("fill", "#D2691E") // Explicitly reset to chocolate
-                            .attr("stroke-width", 0.5); // Reset border
+                            .attr("fill", "#A9A9A9") // Reset to gray
+                            .attr("stroke-width", 0.5); // Reset stroke
                     });
 
                 // Add graticule (latitude/longitude lines)

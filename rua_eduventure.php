@@ -64,7 +64,7 @@ include 'packages/world_map.php';
                 <div class="alert-badge">Updated June 2024</div>
             </div>
             <a href="https://www.gov.uk/student-visa" target="_blank" class="alert-button">
-                View Requirements
+                View
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -82,7 +82,7 @@ include 'packages/world_map.php';
                 <div class="alert-badge">Updated May 2024</div>
             </div>
             <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500" target="_blank" class="alert-button">
-                View Requirements
+                View
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -100,7 +100,7 @@ include 'packages/world_map.php';
                 <div class="alert-badge">Updated April 2024</div>
             </div>
             <a href="https://shorturl.at/kZxkc" target="_blank" class="alert-button">
-                View Requirements
+                View
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -118,7 +118,7 @@ include 'packages/world_map.php';
                 <div class="alert-badge">Updated June 2024</div>
             </div>
             <a href="https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html" target="_blank" class="alert-button">
-                View Requirements
+                View
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
