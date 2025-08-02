@@ -8,10 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
             margin: 0;
             padding: 0;
-            /* background: radial-gradient(circle at top left, #fefcea, #f1e0c9); */
             color: #1f1f1f;
             overflow-x: hidden;
         }
@@ -19,14 +17,12 @@
         .main-container {
             display: flex;
             flex-direction: row;
-            /* default is fine too */
             gap: 40px;
             max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
             flex-wrap: wrap;
         }
-
 
         .map-column {
             flex: 1;
@@ -80,8 +76,7 @@
         .map-container {
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle at center, #4d0000, #220000);
-
+            background: radial-gradient(circle at center, #f8f1e5, #e8dcb9);
             border-radius: 50%;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -112,75 +107,45 @@
             animation: fadeIn 1.2s ease-in-out;
         }
 
-        /* .text-container h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #4b2e00;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-} */
-
-        /* .text-container h1::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #d4af37, #c89f28);
-    display: block;
-    margin: 12px auto 0;
-    border-radius: 2px;
-} */
-
-        /* .text-container p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    text-align: justify;
-    color: #2f1b00;
-    margin-bottom: 18px;
-} */
-
-        .map-legend {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(77, 0, 0, 0.35);
-            /* Deep maroon tint */
-            backdrop-filter: blur(6px);
-            padding: 12px 18px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            border: 1px solid #660000;
-            /* Maroon border */
-            font-size: 0.9rem;
-            color: #ffe;
-            /* Off-white text for readability */
-        }
-
         .text-column p {
             text-align: justify;
         }
 
-
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            margin-top: 8px;
+        .map-tooltip {
+            position: absolute;
+            display: none;
+            background: rgba(255, 253, 245, 0.95);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #d4af37;
+            max-width: 250px;
+            z-index: 100;
+            pointer-events: none;
         }
 
-        .legend-color {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            margin-right: 10px;
-            background: #800000;
-            /* Rich maroon */
-            box-shadow: 0 0 6px rgba(128, 0, 0, 0.6);
-            /* Glow effect */
-            border: 1px solid #fff;
+        .map-tooltip h3 {
+            margin: 0 0 8px 0;
+            color: #800000;
+            font-size: 1.2rem;
         }
 
+        .map-tooltip p {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .map-tooltip ul {
+            margin: 5px 0;
+            padding-left: 15px;
+        }
+
+        .map-tooltip li {
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            color: #555;
+        }
 
         @keyframes slideInLeft {
             from {
@@ -214,8 +179,6 @@
             animation: slideInRight 1s ease-in-out;
         }
 
-
-        /* Animations */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -249,10 +212,7 @@
 
 <body>
     <div class="main-container">
-        <!-- Map FIRST (goes to left) -->
-
-
-        <!-- Text SECOND (goes to right) -->
+        <!-- Text Column -->
         <div class="text-column ">
             <h1 class="cinzel-font">Explore Study Abroad Destinations</h1>
             <p>Embark on an educational journey across the globe. Our premier study abroad programs offer unparalleled opportunities in some of the world's most sought-after destinations.</p>
@@ -260,21 +220,14 @@
             <p>Our expert advisors will guide you through every step of the process, ensuring you find the perfect program to match your academic goals and personal interests.</p>
         </div>
 
+        <!-- Map Column -->
         <div class="map-column ">
             <div class="map-container">
                 <div id="world-map"></div>
                 <div class="map-tooltip" id="map-tooltip"></div>
-                <!-- <div class="map-legend">
-                    <h3>Destinations</h3>
-                    <div class="legend-item">
-                        <div class="legend-color"></div>
-                        <span>Popular Study Locations</span>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
-
 
     <!-- Include D3.js and TopoJSON -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -367,21 +320,21 @@
                 .attr("width", width)
                 .attr("height", height);
 
-            // Define a maroon gradient for the background
+            // Define a light beige gradient for the ocean background
             const defs = svg.append("defs");
             const radialGradient = defs.append("radialGradient")
-                .attr("id", "maroon-gradient")
+                .attr("id", "ocean-gradient")
                 .attr("cx", "50%")
                 .attr("cy", "50%")
                 .attr("r", "70%");
 
             radialGradient.append("stop")
                 .attr("offset", "0%")
-                .attr("stop-color", "#800000"); // Dark maroon center
+                .attr("stop-color", "#f8f1e5"); // Light beige center
 
             radialGradient.append("stop")
                 .attr("offset", "100%")
-                .attr("stop-color", "#220000"); // Deep outer maroon
+                .attr("stop-color", "#e8dcb9"); // Slightly darker beige outer
 
             // Create a group for the map with higher z-index
             const mapGroup = svg.append("g")
@@ -408,7 +361,7 @@
             let rotating = false;
             let rotateInterval;
 
-            // Load and draw the world map with realistic colors
+            // Load and draw the world map with maroon land colors
             d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(function(world) {
                 const countries = topojson.feature(world, world.objects.countries);
 
@@ -418,38 +371,30 @@
                         type: "Sphere"
                     })
                     .attr("d", path)
-                    .attr("fill", "url(#maroon-gradient)")
-                    .attr("stroke", "#0a1f3a")
+                    .attr("fill", "url(#ocean-gradient)")
+                    .attr("stroke", "#d4af37")
                     .attr("stroke-width", 0.5);
 
-                // Draw countries with realistic land colors
+                // Draw countries with maroon land colors
+                // Update the country paths in your D3 code:
                 mapGroup.selectAll(".country")
                     .data(countries.features)
                     .enter()
                     .append("path")
                     .attr("class", "country")
                     .attr("d", path)
-                    .attr("fill", d => {
-                        // Vary the land colors slightly for more realism
-                        const baseColor = "#ccc0b2"; // Beige base
-                        const variation = Math.random() * 0.2 - 0.1;
-                        return d3.color(baseColor).brighter(variation);
-                    })
-                    .attr("stroke", "#a89f94")
-                    .attr("stroke-width", 0.3)
+                    .attr("fill", "#D2691E") // Uniform chocolate color
+                    .attr("stroke", "#5D1916") // Dark brown border
+                    .attr("stroke-width", 0.5)
                     .on("mouseover", function() {
                         d3.select(this)
-                            .attr("fill", "#d9cec1")
-                            .attr("stroke-width", 0.8);
+                            .attr("fill", "#A0522D") // Lighter brown on hover
+                            .attr("stroke-width", 1.5); // Thicker border
                     })
                     .on("mouseout", function() {
                         d3.select(this)
-                            .attr("fill", d => {
-                                const baseColor = "#ccc0b2";
-                                const variation = Math.random() * 0.2 - 0.1;
-                                return d3.color(baseColor).brighter(variation);
-                            })
-                            .attr("stroke-width", 0.3);
+                            .attr("fill", "#D2691E") // Explicitly reset to chocolate
+                            .attr("stroke-width", 0.5); // Reset border
                     });
 
                 // Add graticule (latitude/longitude lines)
@@ -459,10 +404,10 @@
                     .attr("class", "graticule")
                     .attr("d", path)
                     .attr("fill", "none")
-                    .attr("stroke", "rgba(255,255,255,0.1)")
+                    .attr("stroke", "rgba(139, 0, 0, 0.2)") // Dark red/maroon lines
                     .attr("stroke-width", 0.5);
 
-                // Add destination markers with enhanced styling
+                // Add destination markers with gold styling
                 markersGroup.selectAll(".destination-marker")
                     .data(destinations)
                     .enter()
@@ -471,8 +416,8 @@
                     .attr("cx", d => projection([d.lng, d.lat])[0])
                     .attr("cy", d => projection([d.lng, d.lat])[1])
                     .attr("r", 8)
-                    .attr("fill", "#D4AF37")
-                    .attr("stroke", "#220000")
+                    .attr("fill", "#D4AF37") // Gold color
+                    .attr("stroke", "#800000") // Maroon border
                     .attr("stroke-width", 1.5)
                     .attr("opacity", 0.9)
                     .on("mouseover", function(event, d) {
@@ -495,7 +440,7 @@
                 ${uniList}
                 <div style="margin-top:10px; text-align:center;">
                     <button style="
-                        background: #220000;
+                        background: #800000;
                         color: white;
                         border: none;
                         padding: 5px 10px;
@@ -517,13 +462,9 @@
                         tooltip.style("left", (event.pageX + 15) + "px")
                             .style("top", (event.pageY - 15) + "px");
                     })
-                    // ADD THIS CLICK HANDLER:
                     .on("click", function(event, d) {
-                        // Prevent click from propagating to underlying elements
                         event.stopPropagation();
-
-                        // Navigate to details page with destination name as parameter
-                        window.location.href = `../packages/destination-details.php?destination=${encodeURIComponent(d.name)}`;
+                        window.location.href = `destination-details.php?destination=${encodeURIComponent(d.name)}`;
                     });
 
                 // Add animated glow to markers
@@ -563,7 +504,7 @@
                     .attr("y", d => projection([d.lng, d.lat])[1] + 5)
                     .text(d => d.name)
                     .attr("font-size", "12px")
-                    .attr("fill", "#220000")
+                    .attr("fill", "#800000") // Maroon text
                     .attr("text-shadow", "0 0 4px rgba(248, 249, 247, 0.8)")
                     .attr("font-weight", "600");
 

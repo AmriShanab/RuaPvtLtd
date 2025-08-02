@@ -167,13 +167,13 @@ include 'footer.php';
         "University of New South Wales": "assets/images/logos/unsw-logo.png",
         "Coventry University": "assets/images/logos/coventry-logo.png",
         "Heriot-Watt University": "assets/images/logos/heriotwatt-logo.png",
-        "University of Law": "assets/images/logos/law-logo.png",
+        "University of Law": "assets/images/logos/law.jpg",
         "Anglia Ruskin University": "assets/images/logos/anglia-logo.png",
         "Teeside University": "assets/images/logos/teeside-logo.png",
         "Auckland University of Technology": "assets/images/logos/aut-logo.png",
         "University of Waikato": "assets/images/logos/waikato-logo.png",
         "ICN Business School": "assets/images/logos/icn-logo.png",
-        "Emirates Maritime Academy (EMA)": "assets/images/logos/ema-logo.png",
+        "Emirates Maritime Academy (EMA)": "assets/images/logos/eima.jpg",
         "Curtin University Dubai": "assets/images/logos/curtin-logo.png",
         "University of Hertfordshire": "assets/images/logos/hertfordshire-logo.png"
     };

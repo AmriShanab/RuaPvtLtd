@@ -1,5 +1,5 @@
 <?php
-include '../layouts/navbar.php'
+include 'navbar.php'
 ?>
 
 <!DOCTYPE html>
@@ -125,7 +125,7 @@ include '../layouts/navbar.php'
     <div class="hero-section">
         <video autoplay muted loop playsinline class="hero-video">
             <!-- Primary video source -->
-            <source src="../assets/videos/sample_background.mp4" type="video/mp4">
+            <source src="assets/videos/sample_background.mp4" type="video/mp4">
 
             <!-- Fallback video source -->
             <source src="https://pixabay.com/videos/download/video-45707_large.mp4" type="video/mp4">
@@ -139,7 +139,7 @@ include '../layouts/navbar.php'
         </div>
     </div>
     <div class="container">
-        <a href="../pages/rua_eduventure.php" class="back-button">← Back to Map</a>
+        <a href="rua_eduventure.php" class="back-button">← Back to Map</a>
 
         <div class="destination-content">
             <img id="destination-image" src="" alt="" class="destination-image">
