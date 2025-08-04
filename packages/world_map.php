@@ -654,7 +654,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         rotation[0] += 0.05;
                         projection.rotate(rotation);
                         updateMap();
-                    }, 50);
+                    }, 10);
                 }, 10); // 5-second delay before starting idle rotation
             }
         }
