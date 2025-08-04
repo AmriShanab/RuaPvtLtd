@@ -38,8 +38,8 @@ include 'navbar.php';
             </div>
 
             <!-- The Three Pillars of Rua -->
-            <div class="pillars-container-about">
-                <!-- Rua Eduventure -->
+            <!-- <div class="pillars-container-about">
+                Rua Eduventure
                 <div class="pillar-card-about reveal-about">
                     <div class="pillar-icon-about">
                         <i class="fas fa-graduation-cap"></i>
@@ -55,7 +55,7 @@ include 'navbar.php';
                     </div>
                 </div>
 
-                <!-- Rua El Oud -->
+                Rua El Oud
                 <div class="pillar-card-about reveal-about">
                     <div class="pillar-icon-about">
                         <i class="fas fa-seedling"></i>
@@ -71,7 +71,7 @@ include 'navbar.php';
                     </div>
                 </div>
 
-                <!-- Rua Recreation -->
+                Rua Recreation
                 <div class="pillar-card-about reveal-about">
                     <div class="pillar-icon-about">
                         <i class="fas fa-running"></i>
@@ -86,7 +86,7 @@ include 'navbar.php';
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Concluding Philosophy -->
             <div class="philosophy-text-about reveal-about">

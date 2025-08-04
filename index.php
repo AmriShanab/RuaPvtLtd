@@ -100,7 +100,7 @@ include 'navbar.php';
                 <div class="bottom-border"></div>
                 <div class="right-border"></div>
                 <div class="service-icon-circle">
-                    <i class="fas fa-plane service-icon"></i>
+                    <i class="fas fa-walking service-icon"></i>
                 </div>
                 <div class="service-content">
                     <h3 class="cinzel-font">Rua Recreation</h3>

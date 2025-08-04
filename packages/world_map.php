@@ -207,6 +207,42 @@
                 font-size: 2rem;
             }
         }
+
+        .controls-container {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .country-selector {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 2px solid #d4af37;
+            background: rgba(255, 253, 245, 0.9);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            color: #4b2e00;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            outline: none;
+        }
+
+        .country-selector option {
+            padding: 5px;
+        }
+
+        .hidden-label {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .visible-label {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -235,346 +271,404 @@
     <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-geo-polygon@3"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Map dimensions
-            const width = document.getElementById('world-map').clientWidth;
-            const height = document.getElementById('world-map').clientHeight;
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Map dimensions
+    const width = document.getElementById('world-map').clientWidth;
+    const height = document.getElementById('world-map').clientHeight;
 
-            // Study abroad destinations with coordinates and info
-            const destinations = [{
-                    name: "Australia",
-                    lat: -25.2744,
-                    lng: 133.7751,
-                    info: "Top universities in Sydney, Melbourne, and Brisbane",
-                    universities: ["University of Sydney", "University of Melbourne", "ANU"]
-                },
-                {
-                    name: "New Zealand",
-                    lat: -40.9006,
-                    lng: 174.8860,
-                    info: "Quality education in Auckland and Wellington",
-                    universities: ["University of Auckland", "Victoria University"]
-                },
-                {
-                    name: "Dubai, UAE",
-                    lat: 25.2048,
-                    lng: 55.2708,
-                    info: "Growing hub for international education",
-                    universities: ["NYU Abu Dhabi", "University of Dubai"]
-                },
-                {
-                    name: "United Kingdom",
-                    lat: 55.3781,
-                    lng: -3.4360,
-                    info: "Home to Oxford, Cambridge, and other prestigious universities",
-                    universities: ["University of Oxford", "University of Cambridge", "Imperial College"]
-                },
-                {
-                    name: "United States",
-                    lat: 37.0902,
-                    lng: -95.7129,
-                    info: "Leading destination with Ivy League and top state universities",
-                    universities: ["Harvard", "Stanford", "MIT"]
-                },
-                {
-                    name: "Germany",
-                    lat: 51.1657,
-                    lng: 10.4515,
-                    info: "Popular for engineering and tuition-free education",
-                    universities: ["TU Munich", "Heidelberg University"]
-                },
-                {
-                    name: "France",
-                    lat: 46.2276,
-                    lng: 2.2137,
-                    info: "Renowned for arts, business, and engineering schools",
-                    universities: ["Sorbonne", "École Polytechnique"]
-                },
-                {
-                    name: "Italy",
-                    lat: 41.8719,
-                    lng: 12.5674,
-                    info: "Historic universities with strong arts programs",
-                    universities: ["University of Bologna", "Sapienza University"]
-                },
-                {
-                    name: "Spain",
-                    lat: 40.4637,
-                    lng: -3.7492,
-                    info: "Affordable education with vibrant student life",
-                    universities: ["University of Barcelona", "Complutense Madrid"]
-                },
-                {
-                    name: "Netherlands",
-                    lat: 52.1326,
-                    lng: 5.2913,
-                    info: "English-taught programs in Amsterdam and Rotterdam",
-                    universities: ["University of Amsterdam", "Delft University"]
-                }
-            ];
+    // Study abroad destinations with coordinates and info
+    const destinations = [{
+            name: "Australia",
+            lat: -25.2744,
+            lng: 133.7751,
+            info: "Top universities in Sydney, Melbourne, and Brisbane",
+            universities: ["University of Sydney", "University of Melbourne", "ANU"]
+        },
+        {
+            name: "New Zealand",
+            lat: -40.9006,
+            lng: 174.8860,
+            info: "Quality education in Auckland and Wellington",
+            universities: ["University of Auckland", "Victoria University"]
+        },
+        {
+            name: "Dubai, UAE",
+            lat: 25.2048,
+            lng: 55.2708,
+            info: "Growing hub for international education",
+            universities: ["NYU Abu Dhabi", "University of Dubai"]
+        },
+        {
+            name: "United Kingdom",
+            lat: 55.3781,
+            lng: -3.4360,
+            info: "Home to Oxford, Cambridge, and other prestigious universities",
+            universities: ["University of Oxford", "University of Cambridge", "Imperial College"]
+        },
+        {
+            name: "United States",
+            lat: 37.0902,
+            lng: -95.7129,
+            info: "Leading destination with Ivy League and top state universities",
+            universities: ["Harvard", "Stanford", "MIT"]
+        },
+        {
+            name: "Germany",
+            lat: 51.1657,
+            lng: 10.4515,
+            info: "Popular for engineering and tuition-free education",
+            universities: ["TU Munich", "Heidelberg University"]
+        },
+        {
+            name: "France",
+            lat: 46.2276,
+            lng: 2.2137,
+            info: "Renowned for arts, business, and engineering schools",
+            universities: ["Sorbonne", "École Polytechnique"]
+        },
+        {
+            name: "Italy",
+            lat: 41.8719,
+            lng: 12.5674,
+            info: "Historic universities with strong arts programs",
+            universities: ["University of Bologna", "Sapienza University"]
+        },
+        {
+            name: "Spain",
+            lat: 40.4637,
+            lng: -3.7492,
+            info: "Affordable education with vibrant student life",
+            universities: ["University of Barcelona", "Complutense Madrid"]
+        },
+        {
+            name: "Netherlands",
+            lat: 52.1326,
+            lng: 5.2913,
+            info: "English-taught programs in Amsterdam and Rotterdam",
+            universities: ["University of Amsterdam", "Delft University"]
+        }
+    ];
 
-            // Create SVG container
-            const svg = d3.select("#world-map")
-                .append("svg")
-                .attr("width", width)
-                .attr("height", height);
+    // Create SVG container
+    const svg = d3.select("#world-map")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
 
-            // Define a light beige gradient for the ocean background
-            const defs = svg.append("defs");
-            const radialGradient = defs.append("radialGradient")
-                .attr("id", "ocean-gradient")
-                .attr("cx", "50%")
-                .attr("cy", "50%")
-                .attr("r", "70%");
+    // Define a light beige gradient for the ocean background
+    const defs = svg.append("defs");
+    const radialGradient = defs.append("radialGradient")
+        .attr("id", "ocean-gradient")
+        .attr("cx", "50%")
+        .attr("cy", "50%")
+        .attr("r", "70%");
 
-            radialGradient.append("stop")
-                .attr("offset", "0%")
-                .attr("stop-color", "#f8f1e5"); // Light beige center
+    radialGradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "#f8f1e5");
 
-            radialGradient.append("stop")
-                .attr("offset", "100%")
-                .attr("stop-color", "#e8dcb9"); // Slightly darker beige outer
+    radialGradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "#e8dcb9");
 
-            // Create a group for the map with higher z-index
-            const mapGroup = svg.append("g")
-                .attr("class", "map-group");
+    // Create groups
+    const mapGroup = svg.append("g")
+        .attr("class", "map-group");
+    const markersGroup = svg.append("g")
+        .attr("class", "markers-group");
 
-            // Create a group for destination markers with highest z-index
-            const markersGroup = svg.append("g")
-                .attr("class", "markers-group");
+    // Create tooltip
+    const tooltip = d3.select("#map-tooltip");
 
-            // Create a tooltip
-            const tooltip = d3.select("#map-tooltip");
+    // Projection setup
+    const projection = d3.geoOrthographic()
+        .scale(height / 2.1)
+        .translate([width / 2, height / 2])
+        .clipAngle(90)
+        .precision(0.1);
 
-            // Enhanced projection with more realistic curvature
-            const projection = d3.geoOrthographic()
-                .scale(height / 2.1)
-                .translate([width / 2, height / 2])
-                .clipAngle(90)
-                .precision(0.1);
+    const path = d3.geoPath().projection(projection);
 
-            const path = d3.geoPath().projection(projection);
+    // Rotation variables
+    let rotation = [-20, -20, 0];
+    let rotating = false;
+    let rotateInterval;
+    let idleTimeout;
 
-            // Rotation variables
-            let rotation = [0, 0];
-            let rotating = false;
-            let rotateInterval;
+    // Function to stop all rotations (idle and transition)
+    function stopAllRotation() {
+        if (rotateInterval) {
+            clearInterval(rotateInterval);
+            rotating = false;
+        }
+        if (idleTimeout) {
+            clearTimeout(idleTimeout);
+            idleTimeout = null;
+        }
+    }
 
-            // Load and draw the world map with maroon land colors
-            d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(function(world) {
-                const countries = topojson.feature(world, world.objects.countries);
+    // Function to rotate globe to a specific country
+    function rotateToCountry(destination) {
+        stopAllRotation(); // Immediately stop any ongoing rotation
 
-                // Draw oceans first (background)
-                mapGroup.append("path")
-                    .datum({
-                        type: "Sphere"
-                    })
-                    .attr("d", path)
-                    .attr("fill", "url(#ocean-gradient)")
-                    .attr("stroke", "#d4af37")
+        // Calculate target rotation
+        const targetRotation = [-destination.lng, -destination.lat, 0];
+        const currentRotation = projection.rotate();
+
+        // Animate the rotation
+        d3.transition()
+            .duration(1500)
+            .tween("rotate", function() {
+                const interpolate = d3.interpolate(currentRotation, targetRotation);
+                return function(t) {
+                    const r = interpolate(t);
+                    projection.rotate(r);
+                    rotation = r;
+                    updateMap(); // Update map on each rotation frame
+                };
+            })
+            .on("end", function() {
+                // Restart idle rotation after delay
+                idleTimeout = setTimeout(startIdleRotation, 5000);
+            });
+    }
+
+    // Create country selector dropdown
+    const selector = d3.select(".map-container")
+        .append("div")
+        .attr("class", "controls-container")
+        .append("select")
+        .attr("class", "country-selector")
+        .on("change", function() {
+            const selectedCountry = this.value;
+            if (!selectedCountry) return;
+
+            const destination = destinations.find(d => d.name === selectedCountry);
+            if (destination) {
+                // Directly call the rotateToCountry function without delay
+                rotateToCountry(destination);
+            }
+        });
+
+    // Add default option
+    selector.append("option")
+        .attr("value", "")
+        .text("Select a country...");
+
+    // Add country options
+    destinations.forEach(d => {
+        selector.append("option")
+            .attr("value", d.name)
+            .text(d.name);
+    });
+
+    // Load and draw the world map
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(function(world) {
+        const countries = topojson.feature(world, world.objects.countries);
+
+        // Draw oceans
+        mapGroup.append("path")
+            .datum({
+                type: "Sphere"
+            })
+            .attr("d", path)
+            .attr("fill", "url(#ocean-gradient)")
+            .attr("stroke", "#d4af37")
+            .attr("stroke-width", 0.5);
+
+        // Draw countries
+        mapGroup.selectAll(".country")
+            .data(countries.features)
+            .enter()
+            .append("path")
+            .attr("class", "country")
+            .attr("d", path)
+            .attr("fill", "#A9A9A9")
+            .attr("stroke", "#696969")
+            .attr("stroke-width", 0.5)
+            .on("mouseover", function() {
+                d3.select(this)
+                    .attr("fill", "#D3D3D3")
+                    .attr("stroke-width", 1.2);
+            })
+            .on("mouseout", function() {
+                d3.select(this)
+                    .attr("fill", "#A9A9A9")
                     .attr("stroke-width", 0.5);
+            });
 
-                // Draw countries with maroon land colors
-                // Update the country paths in your D3 code:
-                mapGroup.selectAll(".country")
-                    .data(countries.features)
-                    .enter()
-                    .append("path")
-                    .attr("class", "country")
-                    .attr("d", path)
-                    .attr("fill", "#A9A9A9") // Gray land
-                    .attr("stroke", "#696969") // Dim gray border
-                    .attr("stroke-width", 0.5)
-                    .on("mouseover", function() {
-                        d3.select(this)
-                            .attr("fill", "#D3D3D3") // Light gray on hover
-                            .attr("stroke-width", 1.2); // Slightly thicker border
-                    })
-                    .on("mouseout", function() {
-                        d3.select(this)
-                            .attr("fill", "#A9A9A9") // Reset to gray
-                            .attr("stroke-width", 0.5); // Reset stroke
-                    });
+        // Add graticule
+        const graticule = d3.geoGraticule10();
+        mapGroup.append("path")
+            .datum(graticule)
+            .attr("class", "graticule")
+            .attr("d", path)
+            .attr("fill", "none")
+            .attr("stroke", "rgba(139, 0, 0, 0.2)")
+            .attr("stroke-width", 0.5);
 
-                // Add graticule (latitude/longitude lines)
-                const graticule = d3.geoGraticule10();
-                mapGroup.append("path")
-                    .datum(graticule)
-                    .attr("class", "graticule")
-                    .attr("d", path)
-                    .attr("fill", "none")
-                    .attr("stroke", "rgba(139, 0, 0, 0.2)") // Dark red/maroon lines
-                    .attr("stroke-width", 0.5);
+        // Add destination markers
+        markersGroup.selectAll(".destination-marker")
+            .data(destinations)
+            .enter()
+            .append("circle")
+            .attr("class", "destination-marker")
+            .attr("r", 8)
+            .attr("fill", "#D4AF37")
+            .attr("stroke", "#800000")
+            .attr("stroke-width", 1.5)
+            .attr("opacity", 0.9)
+            .on("mouseover", function(event, d) {
+                d3.select(this)
+                    .attr("r", 10)
+                    .attr("stroke-width", 2)
+                    .attr("opacity", 1);
 
-                // Add destination markers with gold styling
-                markersGroup.selectAll(".destination-marker")
-                    .data(destinations)
-                    .enter()
-                    .append("circle")
-                    .attr("class", "destination-marker")
-                    .attr("cx", d => projection([d.lng, d.lat])[0])
-                    .attr("cy", d => projection([d.lng, d.lat])[1])
+                const uniList = d.universities ?
+                    `<ul style="padding-left:15px;margin:5px 0 0 0;">${
+                        d.universities.map(u => `<li style="margin-bottom:3px;">${u}</li>`).join('')
+                    }</ul>` : '';
+
+                tooltip.style("display", "block")
+                    .html(`
+                    <h3>${d.name}</h3>
+                    <p>${d.info}</p>
+                    ${uniList}
+                    <div style="margin-top:10px; text-align:center;">
+                        <button style="
+                            background: #800000;
+                            color: white;
+                            border: none;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            font-size: 12px;
+                        ">View Details</button>
+                    </div>
+                `);
+            })
+            .on("mouseout", function() {
+                d3.select(this)
                     .attr("r", 8)
-                    .attr("fill", "#D4AF37") // Gold color
-                    .attr("stroke", "#800000") // Maroon border
                     .attr("stroke-width", 1.5)
-                    .attr("opacity", 0.9)
-                    .on("mouseover", function(event, d) {
-                        d3.select(this)
-                            .attr("r", 10)
-                            .attr("stroke-width", 2)
-                            .attr("opacity", 1);
+                    .attr("opacity", 0.9);
+                tooltip.style("display", "none");
+            })
+            .on("mousemove", function(event) {
+                tooltip.style("left", (event.pageX + 15) + "px")
+                    .style("top", (event.pageY - 15) + "px");
+            })
+            .on("click", function(event, d) {
+                event.stopPropagation();
+                window.location.href = `destination-details.php?destination=${encodeURIComponent(d.name)}`;
+            });
 
-                        // Create university list
-                        const uniList = d.universities ?
-                            `<ul style="padding-left:15px;margin:5px 0 0 0;">${
-                d.universities.map(u => `<li style="margin-bottom:3px;">${u}</li>`).join('')
-            }</ul>` :
-                            '';
+        // Add animated glow to markers
+        markersGroup.selectAll(".destination-glow")
+            .data(destinations)
+            .enter()
+            .append("circle")
+            .attr("class", "destination-glow")
+            .attr("r", 8)
+            .attr("fill", "#D4AF37")
+            .attr("opacity", 0)
+            .attr("pointer-events", "none");
 
-                        tooltip.style("display", "block")
-                            .html(`
-                <h3>${d.name}</h3>
-                <p>${d.info}</p>
-                ${uniList}
-                <div style="margin-top:10px; text-align:center;">
-                    <button style="
-                        background: #800000;
-                        color: white;
-                        border: none;
-                        padding: 5px 10px;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        font-size: 12px;
-                    ">View Details</button>
-                </div>
-            `);
-                    })
-                    .on("mouseout", function() {
-                        d3.select(this)
-                            .attr("r", 8)
-                            .attr("stroke-width", 1.5)
-                            .attr("opacity", 0.9);
-                        tooltip.style("display", "none");
-                    })
-                    .on("mousemove", function(event) {
-                        tooltip.style("left", (event.pageX + 15) + "px")
-                            .style("top", (event.pageY - 15) + "px");
-                    })
-                    .on("click", function(event, d) {
-                        event.stopPropagation();
-                        window.location.href = `destination-details.php?destination=${encodeURIComponent(d.name)}`;
-                    });
+        // Animate the glow
+        function pulseGlow() {
+            markersGroup.selectAll(".destination-glow")
+                .attr("r", 8)
+                .attr("opacity", 0.7)
+                .transition()
+                .duration(2000)
+                .ease(d3.easeSinInOut)
+                .attr("r", 20)
+                .attr("opacity", 0)
+                .on("end", pulseGlow);
+        }
+        pulseGlow();
 
-                // Add animated glow to markers
-                markersGroup.selectAll(".destination-glow")
-                    .data(destinations)
-                    .enter()
-                    .append("circle")
-                    .attr("class", "destination-glow")
-                    .attr("cx", d => projection([d.lng, d.lat])[0])
-                    .attr("cy", d => projection([d.lng, d.lat])[1])
-                    .attr("r", 8)
-                    .attr("fill", "#D4AF37")
-                    .attr("opacity", 0)
-                    .attr("pointer-events", "none");
+        // Add country name labels
+        markersGroup.selectAll(".destination-label")
+            .data(destinations)
+            .enter()
+            .append("text")
+            .attr("class", "destination-label")
+            .text(d => d.name)
+            .attr("font-size", "12px")
+            .attr("fill", "#800000")
+            .attr("text-shadow", "0 0 4px rgba(248, 249, 247, 0.8)")
+            .attr("font-weight", "600");
 
-                // Animate the glow
-                function pulseGlow() {
-                    markersGroup.selectAll(".destination-glow")
-                        .attr("r", 8)
-                        .attr("opacity", 0.7)
-                        .transition()
-                        .duration(2000)
-                        .ease(d3.easeSinInOut)
-                        .attr("r", 20)
-                        .attr("opacity", 0)
-                        .on("end", pulseGlow);
-                }
-                pulseGlow();
+        // Main update function
+        function updateMap() {
+            // Update country paths
+            mapGroup.selectAll(".country").attr("d", path);
+            mapGroup.selectAll(".graticule").attr("d", path);
 
-                // Add country name labels
-                markersGroup.selectAll(".destination-label")
-                    .data(destinations)
-                    .enter()
-                    .append("text")
-                    .attr("class", "destination-label")
-                    .attr("x", d => projection([d.lng, d.lat])[0] + 15)
-                    .attr("y", d => projection([d.lng, d.lat])[1] + 5)
-                    .text(d => d.name)
-                    .attr("font-size", "12px")
-                    .attr("fill", "#800000") // Maroon text
-                    .attr("text-shadow", "0 0 4px rgba(248, 249, 247, 0.8)")
-                    .attr("font-weight", "600");
+            // Get the center of the viewport
+            const center = projection.invert([width / 2, height / 2]);
 
-                // Drag behavior for rotating the globe
-                const drag = d3.drag()
-                    .on("start", function() {
-                        if (rotating) {
-                            clearInterval(rotateInterval);
-                            rotating = false;
-                        }
-                    })
-                    .on("drag", function(event) {
-                        const rotationSpeed = 0.5;
-                        rotation[0] += event.dx * rotationSpeed;
-                        rotation[1] -= event.dy * rotationSpeed;
-                        projection.rotate(rotation);
-                        updateMap();
-                    });
+            // Update markers and labels
+            markersGroup.selectAll(".destination-marker, .destination-glow, .destination-label")
+                .attr("transform", d => {
+                    const [x, y] = projection([d.lng, d.lat]);
+                    return `translate(${x},${y})`;
+                })
+                .style("display", function(d) {
+                    const isVisible = d3.geoDistance([d.lng, d.lat], center) < Math.PI / 2;
+                    return isVisible ? "block" : "none";
+                });
+        }
 
-                svg.call(drag);
-
-                // Function to update the map when rotated
-                function updateMap() {
-                    mapGroup.selectAll("path")
-                        .attr("d", path);
-
-                    markersGroup.selectAll(".destination-marker, .destination-glow, .destination-label")
-                        .attr("cx", d => projection([d.lng, d.lat])[0])
-                        .attr("cy", d => projection([d.lng, d.lat])[1]);
-
-                    markersGroup.selectAll(".destination-label")
-                        .attr("x", d => projection([d.lng, d.lat])[0] + 15)
-                        .attr("y", d => projection([d.lng, d.lat])[1] + 5);
-                }
-
-                // Initial rotation to show more of the popular destinations
-                rotation = [-20, -20];
+        // Drag behavior
+        const drag = d3.drag()
+            .on("start", function() {
+                stopAllRotation();
+            })
+            .on("drag", function(event) {
+                const rotationSpeed = 0.2;
+                rotation[0] += event.dx * rotationSpeed;
+                rotation[1] -= event.dy * rotationSpeed;
                 projection.rotate(rotation);
                 updateMap();
-
-                // Add subtle ambient rotation when idle
-                let idleTimeout;
-
-                function startIdleRotation() {
-                    if (!rotating && !idleTimeout) {
-                        idleTimeout = setTimeout(() => {
-                            const idleInterval = setInterval(() => {
-                                if (rotating || d3.event && d3.event.type === 'drag') {
-                                    clearInterval(idleInterval);
-                                    idleTimeout = null;
-                                } else {
-                                    rotation[0] += 0.05;
-                                    projection.rotate(rotation);
-                                    updateMap();
-                                }
-                            }, 50);
-                        }, 5000); // Start after 5 seconds of inactivity
-                    }
-                }
-
-                svg.on("mousemove touchstart", function() {
-                    clearTimeout(idleTimeout);
-                    idleTimeout = null;
-                    startIdleRotation();
-                });
-
+            })
+            .on("end", function() {
                 startIdleRotation();
             });
+
+        svg.call(drag);
+
+        // Initial rotation
+        projection.rotate(rotation);
+        updateMap();
+
+        // Idle rotation
+        function startIdleRotation() {
+            // Only start if it's not already running
+            if (!rotating && !idleTimeout) {
+                idleTimeout = setTimeout(() => {
+                    rotating = true;
+                    rotateInterval = setInterval(() => {
+                        rotation[0] += 0.05;
+                        projection.rotate(rotation);
+                        updateMap();
+                    }, 50);
+                }, 10); // 5-second delay before starting idle rotation
+            }
+        }
+
+        svg.on("mousemove touchstart", function() {
+            stopAllRotation(); // Stop idle rotation on any user interaction
+            startIdleRotation();
         });
-    </script>
+
+        // Start the initial idle rotation
+        startIdleRotation();
+    });
+});
+</script>
 </body>
 
 </html>

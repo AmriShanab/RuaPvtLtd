@@ -31,7 +31,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <body>
   <div class="loader-wrapper" id="loaderWrapper">
     <div class="loader-logo">
-      <img src="assets/images/Logo.pdf.png" alt="Your Company Logo" class="loader-logo-img">
+      <img src="assets/images/Only_logo.png" alt="Your Company Logo" class="loader-logo-img">
     </div>
   </div>
 

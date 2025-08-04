@@ -118,7 +118,7 @@ body {
   /* z-index: 10; */
 /* } */
 
-
+/* Existing styles */
 .loader-wrapper {
   position: fixed;
   top: 0;
@@ -145,13 +145,44 @@ body {
   opacity: 0;
   filter: grayscale(100%) brightness(200%);
   transition: opacity 1s ease-in-out, filter 1s ease-in-out;
+  animation: subtle-pulse 2s infinite ease-in-out;
 }
 
 .loader-wrapper.loading-done .loader-logo-img {
   opacity: 1;
   filter: grayscale(0%) brightness(100%);
+  animation: glow-in 1.5s forwards;
 }
 
+/* Keyframes for the pulsing and glowing effect */
+@keyframes subtle-pulse {
+  0% { transform: scale(1); filter: brightness(200%); }
+  50% { transform: scale(1.05); filter: brightness(220%); }
+  100% { transform: scale(1); filter: brightness(200%); }
+}
+
+@keyframes glow-in {
+  0% {
+    opacity: 0;
+    filter: grayscale(100%) brightness(200%);
+  }
+  50% {
+    opacity: 0.8;
+    filter: grayscale(50%) brightness(150%);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px var(--glow-color);
+  }
+  100% {
+    opacity: 1;
+    filter: grayscale(0%) brightness(100%);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--glow-color); /* Fades out the glow */
+  }
+}
+
+:root {
+  --glow-color: #ffcc00; /* Choose a color that complements your logo */
+}
 .cinzel-font {
   font-family: 'Cinzel', serif;
 }
