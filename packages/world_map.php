@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         svg.on("mousemove touchstart", function() {
-            stopAllRotation(); // Stop idle rotation on any user interaction
+            stopAllRotation(); 
             startIdleRotation();
         });
 

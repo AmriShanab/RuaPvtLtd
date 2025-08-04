@@ -8,7 +8,7 @@ include 'navbar.php';
     <div class="hero-section">
         <video autoplay muted loop playsinline class="hero-video">
             <!-- Primary video source -->
-            <source src="assets/videos/sample_background.mp4" type="video/mp4">
+            <source src="assets/videos/rua_about_background.mp4" type="video/mp4">
 
             <!-- Fallback video source -->
             <source src="https://pixabay.com/videos/download/video-45707_large.mp4" type="video/mp4">
@@ -17,8 +17,8 @@ include 'navbar.php';
             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80" alt="Luxury gold texture">
         </video>
         <div class="hero-content">
-            <h1 class="cinzel-font">WELCOME TO RUA (PVT) LTD</h1>
-            <p>Discover Our World of Refined Experiences</p>
+            <!-- <h1 class="cinzel-font">WELCOME TO RUA (PVT) LTD</h1>
+            <p>Discover Our World of Refined Experiences</p> -->
         </div>
     </div>
     <main class="about-page">
