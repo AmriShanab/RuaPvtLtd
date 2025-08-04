@@ -561,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .on("click", function(event, d) {
                 event.stopPropagation();
-                window.location.href = `destination-details.php?destination=${encodeURIComponent(d.name)}`;
+                window.location.href = `../destination-details.php?destination=${encodeURIComponent(d.name)}`;
             });
 
         // Add animated glow to markers
