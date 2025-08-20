@@ -181,7 +181,7 @@ body {
 }
 
 :root {
-  --glow-color: #ffcc00; /* Choose a color that complements your logo */
+  --glow-color: #ffcc00;
 }
 .cinzel-font {
   font-family: 'Cinzel', serif;
