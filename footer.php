@@ -9,10 +9,10 @@
       <img src="assets/images/Logo.pdf.png" alt="Rua Logo" class="footer-logo">
       <p class="footer-tagline">No noise. Just quality, intention, and calm.</p>
       <div class="footer-social">
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1Mtw2nNSu8/?mibextid=wwXIfr" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/rua_eduventure?igsh=dGJkb2hnc2dkejI%3D&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-x"></i></a>
       </div>
     </div>
 
@@ -50,10 +50,10 @@
       <div class="footer-column">
         <h4 class="footer-heading cinzel-font">Company</h4>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <!-- <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li> -->
         </ul>
       </div>
     </div>
@@ -62,11 +62,11 @@
   <div class="footer-bottom">
     <p>&copy; <span id="current-year"></span> Rua (Pvt) Ltd. All rights reserved.</p>
     <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
+      <!-- <a href="#">Privacy Policy</a>
       <span class="divider">|</span>
       <a href="#">Terms of Use</a>
       <span class="divider">|</span>
-      <a href="#">Sitemap</a>
+      <a href="#">Sitemap</a> -->
     </div>
   </div>
 </footer>

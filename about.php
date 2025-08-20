@@ -143,7 +143,6 @@ include 'navbar.php';
         </section>
 
         <!-- Our Values Section -->
-        <!-- Our Values Section -->
         <section class="values-section-about">
             <h2 class="section-title-about reveal-about cinzel-font">Our Values</h2>
             <div class="values-container-about">
@@ -197,6 +196,17 @@ include 'navbar.php';
                         </p>
                     </div>
                 </div>
+
+                <!-- Value Item 6 -->
+                      <div class="value-item-about reveal-about">
+                    <span class="value-number-about">6</span>
+                    <div class="value-content-about">
+                        <h3 class="value-title-about">Integrity in Action</h3>
+                        <p class="value-description-about">
+                            We do what’s right, even when no one is watching. Every decision, every recommendation, and every interaction is built on honesty, transparency, and trust.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -209,7 +219,7 @@ include 'navbar.php';
             const optionsAbout = {
                 root: null, // viewport
                 rootMargin: '0px',
-                threshold: 0.2 // Trigger when 20% of the element is visible
+                threshold: 0.2 
             };
 
             const observerAbout = new IntersectionObserver((entries, observer) => {

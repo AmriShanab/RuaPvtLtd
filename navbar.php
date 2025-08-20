@@ -21,6 +21,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
   <link rel="stylesheet" href="assets/styles/contact.css">
   <link rel="stylesheet" href="assets/styles/partners.css">
   <link rel="stylesheet" href="assets/styles/about.css">
+  <link rel="stylesheet" href="assets/styles/rua_el_oud.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
@@ -45,8 +46,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
       <ul class="navbar-links" id="navbarLinks">
         <li><a href="index.php" class="cinzel-font <?= ($currentPage === 'index.php') ? 'active-link' : '' ?>">Home</a></li>
         <li><a href="rua_eduventure.php" class="cinzel-font <?= ($currentPage === 'rua_eduventure.php') ? 'active-link' : '' ?>">Rua Eduventure</a></li>
-        <li><a href="#" class="cinzel-font">Rua El Oud</a></li>
-        <li><a href="#" class="cinzel-font">Rua Recreation</a></li>
+        <li><a href="rua_el_oud.php" class="cinzel-font <?= ($currentPage === 'rua_el_oud.php') ? 'active-link' : '' ?>">Rua El Oud</a></li>
+        <li><a href="rua_recreation.php" class="cinzel-font <?= ($currentPage === 'rua_recreation.php') ? 'active-link' : '' ?>">Rua Recreation</a></li>
         <li><a href="about.php" class="cinzel-font <?= ($currentPage === 'about.php') ? 'active-link' : '' ?>">About Us</a></li>
         <li><a href="contact.php" class="cinzel-font <?= ($currentPage === 'contact.php') ? 'active-link' : '' ?>">Contact</a></li>
       </ul>

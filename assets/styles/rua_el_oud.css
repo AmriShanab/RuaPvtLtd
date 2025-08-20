@@ -1,0 +1,272 @@
+/* Oud Products Specific Styles */
+        .oud-root {
+            --maroon-oud: #220000;
+            --beige-oud: #ccc0b2;
+            --offwhite-oud: #f8f9f7;
+            --gold-oud: #c5a059;
+            --translucent-oud: rgba(34, 0, 0, 0.85);
+        }
+        
+        .oud-body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+            color: var(--maroon-oud);
+            background-color: var(--offwhite-oud);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+        }
+        
+        .hero-video, .hero-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--offwhite-oud);
+            width: 90%;
+            z-index: 2;
+        }
+        
+        .cinzel-font {
+            font-family: 'Cinzel', 'Times New Roman', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold-oud);
+        }
+        
+        /* .blur-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            z-index: 1;
+        } */
+        
+        /* .top-blur {
+            top: 0;
+            background: linear-gradient(to bottom, var(--maroon-oud), transparent);
+        } */
+        
+        /* .bottom-blur {
+            bottom: 0;
+            background: linear-gradient(to top, var(--maroon-oud), transparent);
+        } */
+        
+        /* Product Sections */
+        .oud-section {
+            min-height: auto;
+            padding: 3rem 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .oud-product-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem;
+        }
+        
+        /* Mobile-first layout */
+        .oud-product-image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .oud-product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, var(--translucent-oud) 100%);
+            z-index: 1;
+        }
+        
+        .oud-product-content {
+            z-index: 2;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .oud-product-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--gold-oud);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .oud-product-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 1px;
+            background: var(--gold-oud);
+        }
+        
+        .oud-product-subtitle {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--beige-oud);
+            margin-bottom: 1.5rem;
+            display: block;
+            line-height: 1.6;
+        }
+        
+        .oud-product-description {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        /* Alternate layout for larger screens */
+        @media (min-width: 768px) {
+            .oud-product-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                padding: 2rem;
+            }
+            
+            .oud-product-content {
+                text-align: left;
+            }
+            
+            .oud-product-title::after {
+                left: 0;
+                transform: none;
+            }
+            
+            /* Alternate layout for even sections */
+            .oud-section:nth-child(even) .oud-product-container {
+                direction: rtl;
+            }
+            
+            .oud-section:nth-child(even) .oud-product-content {
+                direction: ltr;
+            }
+            
+            .hero-section {
+                height: 80vh;
+            }
+            
+            .cinzel-font {
+                font-size: 3.5rem;
+            }
+        }
+        
+        /* Journey CTA Section */
+        .oud-journey {
+            text-align: center;
+            background: var(--maroon-oud);
+            color: var(--offwhite-oud);
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 1rem;
+        }
+        
+        .oud-journey-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .oud-journey-title {
+            font-size: 2.2rem;
+            color: var(--gold-oud);
+            margin-bottom: 1.5rem;
+        }
+        
+        .oud-cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--gold-oud);
+            border: 1px solid var(--gold-oud);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .oud-cta-button:hover {
+            background: var(--gold-oud);
+            color: var(--maroon-oud);
+        }
+        
+        /* Decorative elements */
+        .oud-decoration {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 0;
+            display: none; /* Hide on mobile */
+        }
+        
+        @media (min-width: 992px) {
+            .oud-decoration {
+                display: block;
+            }
+            
+            .oud-decoration-1 {
+                top: 10%;
+                right: 10%;
+                width: 200px;
+                height: 200px;
+                background: var(--gold-oud);
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            }
+            
+            .oud-decoration-2 {
+                bottom: 10%;
+                left: 10%;
+                width: 150px;
+                height: 150px;
+                border: 1px solid var(--gold-oud);
+                transform: rotate(45deg);
+            }
+            
+            .oud-journey-title {
+                font-size: 3rem;
+            }
+            
+            .oud-cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .oud-journey-content {
+                padding: 2rem;
+            }
+        }
