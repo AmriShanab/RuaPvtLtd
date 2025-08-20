@@ -155,7 +155,10 @@ include 'footer.php';
         "ICN Business School",
         "Emirates Maritime Academy (EMA)",
         "Curtin University Dubai",
-        "University of Hertfordshire"
+        "University of Hertfordshire",
+        "University of Bristol",
+        "Loughborough University",
+        "Durham University"
     ];
 
     const universityLogos = {
@@ -175,7 +178,11 @@ include 'footer.php';
         "ICN Business School": "assets/images/logos/icn-logo.png",
         "Emirates Maritime Academy (EMA)": "assets/images/logos/eima.jpg",
         "Curtin University Dubai": "assets/images/logos/curtin-logo.png",
-        "University of Hertfordshire": "assets/images/logos/hertfordshire-logo.png"
+        "University of Hertfordshire": "assets/images/logos/hertfordshire-logo.png",
+        "University of Bristol": "assets/images/logos/university_of_bristol.png",
+        "Loughborough University": "assets/images/logos/LoughBorough.svg",
+        "Durham University": "assets/images/logos/durham-university-logo.png",
+        
     };
 
     const testimonials = [{

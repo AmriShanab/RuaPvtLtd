@@ -135,9 +135,9 @@ include 'navbar.php';
             <h3 class="contact-detail-heading">Social Media</h3>
             <div class="contact-social-links">
                 <a href="#" class="contact-social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="contact-social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="contact-social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="contact-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/rua_eduventure?igsh=dGJkb2hnc2dkejI%3D&utm_source=qr" class="contact-social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1Mtw2nNSu8/?mibextid=wwXIfr" class="contact-social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="www.linkedin.com/in/rua-pvt-ltd-08767437a6" class="contact-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="contact-social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
