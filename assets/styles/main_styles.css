@@ -435,6 +435,10 @@ body {
   .loader-logo-img {
     max-width: 150px;
   }
+
+  .navbar-logo img {
+    max-height: 70px;
+  }
 }
 
 @media (max-width: 480px) {

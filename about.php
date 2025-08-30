@@ -113,7 +113,7 @@ include 'navbar.php';
             <h2 class="section-title-about reveal-about">Our Vision</h2>
             <div class="vision-statement-about reveal-about">
                 <p>
-                    To inspire intentional living by creating seamless experiences in learning, wellness, and leisure — globally and locally.
+                    To inspire intentional living by creating seamless experiences in learning, wellness, and leisure globally and locally.
                 </p>
             </div>
         </section>
@@ -162,7 +162,7 @@ include 'navbar.php';
                     <div class="value-content-about">
                         <h3 class="value-title-about">Purpose-Driven Growth</h3>
                         <p class="value-description-about">
-                            We believe that every step — whether academic, personal, or professional, should be guided with clarity, intention, and the will to grow meaningfully.
+                            We believe that every step  whether academic, personal, or professional, should be guided with clarity, intention, and the will to grow meaningfully.
                         </p>
                     </div>
                 </div>

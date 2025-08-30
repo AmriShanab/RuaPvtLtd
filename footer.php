@@ -61,6 +61,7 @@
 
   <div class="footer-bottom">
     <p>&copy; <span id="current-year"></span> Rua (Pvt) Ltd. All rights reserved.</p>
+    <p class="footer-love">Made with <span>❤️</span> by Endevo</p>
     <div class="footer-legal">
       <!-- <a href="#">Privacy Policy</a>
       <span class="divider">|</span>

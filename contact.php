@@ -52,7 +52,7 @@ include 'navbar.php';
                     </div>
                     <div>
                         <strong>Call Us</strong>
-                        <p>+94 70 777 0883</p>
+                        <p style="text-align: center">+94 70 777 0883</p>
                     </div>
                 </div>
                 

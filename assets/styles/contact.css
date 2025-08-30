@@ -251,8 +251,8 @@
         .contact-method-item {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 10px;
+            margin-bottom: 10px;
         }
 
         .contact-method-icon {
@@ -279,6 +279,10 @@
             display: flex;
             gap: 15px;
             margin-top: 30px;
+        }
+
+        .contact-social-links a {
+            text-decoration: none;
         }
 
         .contact-social-link {
@@ -340,4 +344,9 @@
             .contact-main-heading {
                 font-size: 2.5rem;
             }
+            
+        .contact-method-item strong {
+            margin-bottom: -85px;
+        }
+
         }
