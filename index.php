@@ -8,7 +8,17 @@ include 'navbar.php';
     <div class="hero-section">
         <video autoplay muted loop playsinline class="hero-video">
             <!-- Primary video source -->
-            <source src="assets/videos/rua_home_page_web.mp4" type="video/mp4">
+            <source src="assets/videos/rua_home_page_web.mp4" type="video/mp4" id="indexVideo">
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var videoSource = document.getElementById("indexVideo");
+                if (window.innerWidth <= 768) {
+                    videoSource.src = "assets/videos/rua_home_page_mobile.mp4";
+                    // Reload video to apply new source
+                    videoSource.parentElement.load();
+                }
+            });
+            </script>
 
             <!-- Fallback video source -->
             <source src="https://pixabay.com/videos/download/video-45707_large.mp4" type="video/mp4">

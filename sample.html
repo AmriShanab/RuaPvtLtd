@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Australia - The Land Down Under</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f8f9f7; /* Off White */
+            color: #220000; /* Maroon */
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #220000, #500000);
+            color: #ccc0b2; /* Beige */
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ccc0b2;
+        }
+        
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #220000;
+            margin: 30px 0 20px;
+            border-bottom: 2px solid #ccc0b2;
+            padding-bottom: 10px;
+        }
+        
+        .intro {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .data-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .chart-box {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+            color: #220000;
+        }
+        
+        .universities {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 10px;
+            scrollbar-width: thin;
+        }
+        
+        .carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .carousel::-webkit-scrollbar-thumb {
+            background: #ccc0b2;
+            border-radius: 4px;
+        }
+        
+        .uni-card {
+            flex: 0 0 auto;
+            width: 250px;
+            background: #f8f9f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-left: 4px solid #220000;
+        }
+        
+        .requirements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .req-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .req-card h3 {
+            font-family: 'Cinzel', serif;
+            color: #220000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc0b2;
+        }
+        
+        .req-card ul {
+            list-style-type: none;
+        }
+        
+        .req-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .req-card li:before {
+            content: "•";
+            color: #220000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            background: #220000;
+            color: #ccc0b2;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .data-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Land Down Under!</h1>
+            <p>Australia - Your Gateway to World-Class Education</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <p>Australia is one of the most popular destinations for Sri Lankan students, offering world-class universities, globally recognized degrees, and excellent career prospects. With programs in business, IT, engineering, health sciences, hospitality, and more, Australian qualifications are highly respected worldwide. Beyond academics, students enjoy a safe, multicultural society that values diversity and provides a strong Sri Lankan community for support—making Australia the ideal blend of quality education and rewarding lifestyle.</p>
+        </section>
+        
+        <h2>Cost of Education in Australia</h2>
+        <div class="data-container">
+            <div class="chart-box">
+                <h3 class="chart-title">Living Cost Per Year</h3>
+                <canvas id="livingCostChart"></canvas>
+            </div>
+            
+            <div class="chart-box">
+                <h3 class="chart-title">Tuition Fee Range (AUD)</h3>
+                <canvas id="tuitionFeeChart"></canvas>
+            </div>
+        </div>
+        
+        <section class="universities">
+            <h2>Featured Universities</h2>
+            <div class="carousel">
+                <div class="uni-card">
+                    <h3>RMIT University</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>Deakin University</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>University of Victoria</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>La Trobe University</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>Monash University</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>Southern Cross University</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>Torrens University</h3>
+                </div>
+                <div class="uni-card">
+                    <h3>University of Canberra</h3>
+                </div>
+            </div>
+        </section>
+        
+        <h2>Entry Requirements</h2>
+        <div class="requirements">
+            <div class="req-card">
+                <h3>Undergraduate Programs</h3>
+                <ul>
+                    <li>A/Ls with 3C passes</li>
+                    <li>English Proficiency: IELTS or PTE</li>
+                    <li>Additional requirements may vary by university</li>
+                </ul>
+            </div>
+            
+            <div class="req-card">
+                <h3>Postgraduate Programs</h3>
+                <ul>
+                    <li>Bachelor's degree with 65% or more</li>
+                    <li>English Proficiency: IELTS or PTE</li>
+                    <li>Relevant work experience may be required</li>
+                </ul>
+            </div>
+            
+            <div class="req-card">
+                <h3>Scholarships</h3>
+                <ul>
+                    <li>Merit-based scholarships available</li>
+                    <li>Research grants for postgraduate students</li>
+                    <li>University-specific financial aid</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Australian Education Guide for Sri Lankan Students</p>
+        </div>
+    </footer>
+
+    <script>
+        // Living Cost Chart
+        const livingCostCtx = document.getElementById('livingCostChart').getContext('2d');
+        const livingCostChart = new Chart(livingCostCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Accommodation', 'Food', 'Transport', 'Other Expenses'],
+                datasets: [{
+                    data: [15000, 8000, 3000, 3710],
+                    backgroundColor: [
+                        '#220000',
+                        '#8B0000',
+                        '#A52A2A',
+                        '#ccc0b2'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': AUD ' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Tuition Fee Chart
+        const tuitionFeeCtx = document.getElementById('tuitionFeeChart').getContext('2d');
+        const tuitionFeeChart = new Chart(tuitionFeeCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Minimum', 'Average', 'Maximum'],
+                datasets: [{
+                    label: 'AUD',
+                    data: [20000, 35000, 50000],
+                    backgroundColor: '#220000',
+                    borderColor: '#220000',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Australian Dollars (AUD)'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'AUD ' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

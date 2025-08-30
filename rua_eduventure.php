@@ -21,7 +21,7 @@ include 'navbar.php';
 </div>
 
 <?php
-include 'packages/world_map.php';
+include 'world_map.php';
 ?>
 
 <div class="partner-universities-section">
