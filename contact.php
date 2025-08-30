@@ -50,7 +50,7 @@ include 'navbar.php';
                     <div class="contact-method-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <div>
+                    <div class="contact-method-text">
                         <strong>Call Us</strong>
                         <p style="text-align: center">+94 70 777 0883</p>
                     </div>
@@ -60,7 +60,7 @@ include 'navbar.php';
                     <div class="contact-method-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <div>
+                    <div class="contact-method-text">
                         <strong>Email Us</strong>
                         <p>ceo@rua.international</p>
                     </div>
