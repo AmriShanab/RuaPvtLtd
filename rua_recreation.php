@@ -341,7 +341,7 @@ include 'navbar.php'
     <section class="rec-balanced">
         <div class="rec-balanced-content">
             <h2 style="font-size: 1.8rem; color: var(--maroon-rec); margin-bottom: 1.5rem;" class="cinzel-font">More Than Venues</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Our spaces are invitations to breathe deeper, move freely, and enjoy life your way. With Rua Recreation, your time isn't just spent — it's experienced.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Our spaces are invitations to breathe deeper, move freely, and enjoy life your way. With Rua Recreation, your time isn't just spent it's experienced.</p>
             <p>Whether you're escaping the routine or embracing it differently, every detail is designed for your rest, movement, and connection.</p>
         </div>
         <div class="rec-balanced-image" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');"></div>
@@ -351,7 +351,7 @@ include 'navbar.php'
     <section class="rec-cta">
         <!-- <div class="rec-wave"></div> -->
         <h2 class="rec-cta-title cinzel-font">Your Balanced Experience Awaits</h2>
-        <p style="max-width: 100%; margin: 0 auto 2rem; padding: 0 1rem;">Contact us to plan your next experience — and let Rua Recreation make every moment count.</p>
+        <p style="max-width: 100%; margin: 0 auto 2rem; padding: 0 1rem;">Contact us to plan your next experience and let Rua Recreation make every moment count.</p>
         <button class="rec-cta-button">Begin Your Journey</button>
     </section>
 

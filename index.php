@@ -44,14 +44,14 @@ include 'navbar.php';
                 </svg> -->
                 </div>
             </div>
-            <div class="welcome-content autoBlur">
+            <div class="welcome-content sam">
                 <h2 class="cinzel-font">Elegance in Simplicity</h2>
                 <div class="welcome-divider"></div>
                 <p class="welcome-text ">At Rua, we bring together the elegance of choice and the ease of experience through simple offerings: From trusted study abroad guidance for students aiming higher to the timeless richness of agarwood fragrances for those who value calm and clarity, and curated recreational experiences to help you unwind.</p>
-                <p class="welcome-text">Whether you're planning your future, finding balance, or taking a break — Rua is here to make it all feel effortless.</p>
+                <p class="welcome-text">Whether you're planning your future, finding balance, or taking a break Rua is here to make it all feel effortless.</p>
                 <p class="welcome-tagline">No noise. Just quality, intention, and calm.</p>
             </div>
-            <div class="welcome-right autoBlur">
+            <div class="welcome-right sam">
                 <div class="welcome-ornament right">
                     <svg viewBox="0 0 100 100" class="gold-ornament">
                         <path d="M50,10 L60,50 L90,50 L65,70 L75,90 L50,75 L25,90 L35,70 L10,50 L40,50 Z"
@@ -65,7 +65,7 @@ include 'navbar.php';
     <section class="services-section">
         <div class="section-blur-top"></div>
         <div class="section-blur-bottom"></div>
-        <div class="services-header autoBlur">
+        <div class="services-header sam">
             <h2 class="cinzel-font">Our Services</h2>
             <div class="services-divider">
                 <div class="divider-line"></div>
@@ -76,7 +76,7 @@ include 'navbar.php';
         </div>
         <div class="services-container">
             <!-- Eduventure Section -->
-            <div class="service-card autoBlur">
+            <div class="service-card sam">
                 <div class="bottom-border"></div>
                 <div class="right-border"></div>
                 <div class="service-icon-circle">
@@ -85,13 +85,13 @@ include 'navbar.php';
                 <div class="service-content">
                     <h3 class="cinzel-font">Rua Eduventure</h3>
                     <div class="service-divider"></div>
-                    <p>At Rua Eduventure, we guide ambitious students toward life-changing opportunities in top global destinations — the UK, Australia, Dubai, the USA, and across Europe. From university selection to visa support, our personalized approach ensures a smooth, confident transition into international education.</p>
-                    <p class="highlight-text">With Rua, it's more than studying abroad — it's about starting your future with clarity, support, and purpose.</p>
+                    <p>At Rua Eduventure, we guide ambitious students toward life changing opportunities in top global destinations the UK, Australia, Dubai, the USA, and across Europe. From university selection to visa support, our personalized approach ensures a smooth, confident transition into international education.</p>
+                    <p class="highlight-text">With Rua, it's more than studying abroad it's about starting your future with clarity, support, and purpose.</p>
                 </div>
             </div>
 
             <!-- El Oud Section -->
-            <div class="service-card autoBlur">
+            <div class="service-card sam">
                 <div class="bottom-border"></div>
                 <div class="right-border"></div>
                 <div class="service-icon-circle">
@@ -101,12 +101,12 @@ include 'navbar.php';
                     <h3 class="cinzel-font">Rua El Oud</h3>
                     <div class="service-divider"></div>
                     <p>From the heart of the forest to the palm of your hand, Rua El Oud offers rare agarwood, pure oud oil, and signature fragrances crafted with intention. Sourced locally and distilled with care, each drop carries the depth of tradition and a hint of mystery.</p>
-                    <p class="highlight-text">Whether for personal ritual or global connoisseurs, Rua El Oud invites you to experience the unseen — timeless, evocative and authentic.</p>
+                    <p class="highlight-text">Whether for personal ritual or global connoisseurs, Rua El Oud invites you to experience the unseen timeless, evocative and authentic.</p>
                 </div>
             </div>
 
             <!-- Recreation Section -->
-            <div class="service-card autoBlur">
+            <div class="service-card">
                 <div class="bottom-border"></div>
                 <div class="right-border"></div>
                 <div class="service-icon-circle">

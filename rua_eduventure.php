@@ -54,7 +54,7 @@ include 'world_map.php';
 
     <div class="alert-cards-container">
         <!-- UK Alert -->
-        <div class="alert-card autoBlur" data-country="uk">
+        <div class="alert-card sam" data-country="uk">
             <div class="country-flag">
                 <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" width="40">
             </div>
@@ -72,7 +72,7 @@ include 'world_map.php';
         </div>
 
         <!-- Australia Alert -->
-        <div class="alert-card autoBlur" data-country="australia">
+        <div class="alert-card sam" data-country="australia">
             <div class="country-flag">
                 <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag" width="40">
             </div>
@@ -90,7 +90,7 @@ include 'world_map.php';
         </div>
 
         <!-- New Zealand Alert -->
-        <div class="alert-card autoBlur" data-country="newzealand">
+        <div class="alert-card sam" data-country="newzealand">
             <div class="country-flag">
                 <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag" width="40">
             </div>
@@ -108,7 +108,7 @@ include 'world_map.php';
         </div>
 
         <!-- USA Alert -->
-        <div class="alert-card autoBlur" data-country="usa">
+        <div class="alert-card sam" data-country="usa">
             <div class="country-flag">
                 <img src="https://flagcdn.com/w80/us.png" alt="USA Flag" width="40">
             </div>
@@ -128,7 +128,7 @@ include 'world_map.php';
 
     <div class="alerts-footer">
         <p>For personalized visa assistance, contact our immigration experts</p>
-        <a href="/contact" class="consultation-button">Book Free Consultation</a>
+        <a href="contact.php" class="consultation-button">Book Free Consultation</a>
     </div>
 </div>
 
@@ -219,7 +219,7 @@ include 'footer.php';
 
     universities.forEach(university => {
         const card = document.createElement('div');
-        card.className = 'university-card autoBlur';
+        card.className = 'university-card sam';
 
         // Check if we have a logo for this university
         const logoUrl = universityLogos[university];
@@ -241,7 +241,7 @@ include 'footer.php';
 
     testimonials.forEach((testimonial, index) => {
         const card = document.createElement('div');
-        card.className = 'testimonial-card autoBlur';
+        card.className = 'testimonial-card sam';
 
         // Create star rating
         const stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);

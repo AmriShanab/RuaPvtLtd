@@ -40,7 +40,7 @@ include 'navbar.php';
             <!-- Main Intro Paragraph -->
             <div class="intro-text-about reveal-about">
                 <p>
-                    Rua is a multi-dimensional venture built on over a decade of experience across international education,
+                    Rua is a multi dimensional venture built on over a decade of experience across international education,
                     oud and agarwood craftsmanship, and curated recreation. With roots in Sri Lanka and a reach that extends
                     globally, we bring together ambition, well-being, and experience in ways that are both grounded and
                     quietly distinctive.
@@ -160,7 +160,7 @@ include 'navbar.php';
                 <div class="value-item-about reveal-about">
                     <span class="value-number-about">1</span>
                     <div class="value-content-about">
-                        <h3 class="value-title-about">Purpose-Driven Growth</h3>
+                        <h3 class="value-title-about">Purpose Driven Growth</h3>
                         <p class="value-description-about">
                             We believe that every step  whether academic, personal, or professional, should be guided with clarity, intention, and the will to grow meaningfully.
                         </p>
@@ -170,7 +170,7 @@ include 'navbar.php';
                 <div class="value-item-about reveal-about">
                     <span class="value-number-about">2</span>
                     <div class="value-content-about">
-                        <h3 class="value-title-about">People-First Approach</h3>
+                        <h3 class="value-title-about">People First Approach</h3>
                         <p class="value-description-about">
                             Behind every service is a human experience. We operate with empathy, responsibility, and care for students, clients & our partners.
                         </p>
@@ -192,7 +192,7 @@ include 'navbar.php';
                     <div class="value-content-about">
                         <h3 class="value-title-about">Grounded Globalism</h3>
                         <p class="value-description-about">
-                            We operate globally but stay deeply connected to our local roots, valuing cross-cultural insight while never losing our own voice.
+                            We operate globally but stay deeply connected to our local roots, valuing cross cultural insight while never losing our own voice.
                         </p>
                     </div>
                 </div>
