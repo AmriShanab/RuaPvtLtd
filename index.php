@@ -13,7 +13,7 @@ include 'navbar.php';
             document.addEventListener("DOMContentLoaded", function() {
                 var videoSource = document.getElementById("indexVideo");
                 if (window.innerWidth <= 768) {
-                    videoSource.src = "assets/videos/rua_home_page_mobile.mp4";
+                    videoSource.src = "assets/videos/rua_home_page_mobile_new.mp4";
                     // Reload video to apply new source
                     videoSource.parentElement.load();
                 }
