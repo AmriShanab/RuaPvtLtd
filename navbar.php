@@ -44,12 +44,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         </a>
       </div>
       <ul class="navbar-links" id="navbarLinks">
-        <li><a href="index.php" class="cinzel-font <?= ($currentPage === 'index.php') ? 'active-link' : '' ?>">Home</a></li>
-        <li><a href="rua_eduventure.php" class="cinzel-font <?= ($currentPage === 'rua_eduventure.php') ? 'active-link' : '' ?>">Rua Eduventure</a></li>
-        <li><a href="rua_el_oud.php" class="cinzel-font <?= ($currentPage === 'rua_el_oud.php') ? 'active-link' : '' ?>">Rua El Oud</a></li>
-        <li><a href="rua_recreation.php" class="cinzel-font <?= ($currentPage === 'rua_recreation.php') ? 'active-link' : '' ?>">Rua Recreation</a></li>
-        <li><a href="about.php" class="cinzel-font <?= ($currentPage === 'about.php') ? 'active-link' : '' ?>">About Us</a></li>
-        <li><a href="contact.php" class="cinzel-font <?= ($currentPage === 'contact.php') ? 'active-link' : '' ?>">Contact</a></li>
+        <li><a href="index" class="cinzel-font <?= ($currentPage === 'index.php') ? 'active-link' : '' ?>">Home</a></li>
+        <li><a href="rua_eduventure" class="cinzel-font <?= ($currentPage === 'rua_eduventure.php') ? 'active-link' : '' ?>">Rua Eduventure</a></li>
+        <li><a href="rua_el_oud" class="cinzel-font <?= ($currentPage === 'rua_el_oud.php') ? 'active-link' : '' ?>">Rua El Oud</a></li>
+        <li><a href="rua_recreation" class="cinzel-font <?= ($currentPage === 'rua_recreation.php') ? 'active-link' : '' ?>">Rua Recreation</a></li>
+        <li><a href="about" class="cinzel-font <?= ($currentPage === 'about.php') ? 'active-link' : '' ?>">About Us</a></li>
+        <li><a href="contact" class="cinzel-font <?= ($currentPage === 'contact.php') ? 'active-link' : '' ?>">Contact</a></li>
       </ul>
 
       <button class="navbar-toggle" id="navbarToggle">
