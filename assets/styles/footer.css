@@ -150,6 +150,12 @@
 .footer-love span {
   display: inline-block;
   animation: heartbeat 1.5s infinite;
+  color: brown;
+}
+
+.footer-love .heart {
+  color: #8B0000;
+  font-size: 1.4rem;
 }
 
 @keyframes heartbeat {
