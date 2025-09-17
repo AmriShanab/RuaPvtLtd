@@ -268,17 +268,52 @@ enriching global experiences.`,
     universities: [
       {
         name: "University of South Florida",
-        logo: "assets/images/usa/usf.png",
+        logo: "assets/images/usa/usf.avif",
         desc: "Research university with diverse programs",
       },
       {
         name: "Illinois State University",
-        logo: "assets/images/usa/illinois.png",
+        logo: "assets/images/usa/illinois.svg",
         desc: "Comprehensive university with strong academics",
       },
       {
         name: "Wichita State University",
-        logo: "assets/images/usa/wichita.png",
+        logo: "assets/images/usa/wichitha.jpg",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Minnesota State University",
+        logo: "assets/images/usa/minnesota.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Kent State University",
+        logo: "assets/images/usa/kent.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Webster University",
+        logo: "assets/images/usa/webster_university.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Concordia University",
+        logo: "assets/images/usa/concordia-university-logo.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Eastern Michigan University",
+        logo: "assets/images/usa/eastern_michigan.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Troy University",
+        logo: "assets/images/usa/troy.webp",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Texas A&M University",
+        logo: "assets/images/usa/texas.png",
         desc: "Innovative programs with industry connections",
       },
     ],
@@ -317,6 +352,41 @@ enriching global experiences.`,
         name: "University of Otago",
         logo: "assets/images/nz/otago.png",
         desc: "Health sciences and research focus",
+      },
+      {
+        name: "Massey University",
+        logo: "assets/images/nz/massey.png",
+        desc: "Innovative research and distance learning leader",
+      },
+      {
+        name: "University of Waikato",
+        logo: "assets/images/nz/waikato.png",
+        desc: "Strong in management, education, and environmental sciences",
+      },
+      {
+        name: "Auckland University of Technology",
+        logo: "assets/images/nz/aut.png",
+        desc: "Focus on applied learning and industry connections",
+      },
+      {
+        name: "Toi Ohomai Institute of Technology",
+        logo: "assets/images/nz/toiohomai.png",
+        desc: "Practical vocational and technical education",
+      },
+      {
+        name: "Le Cordon Bleu",
+        logo: "assets/images/nz/lecordonbleu.png",
+        desc: "World-renowned culinary and hospitality school",
+      },
+      {
+        name: "Lincoln University",
+        logo: "assets/images/nz/lincoln.png",
+        desc: "Specialist in agriculture, land, and environmental studies",
+      },
+      {
+        name: "Southern Institute of Technology",
+        logo: "assets/images/nz/sit.png",
+        desc: "Affordable education with zero tuition fees option",
       },
     ],
     requirements: {
@@ -357,9 +427,19 @@ welcoming home away from home.`,
         desc: "Australian quality education in Dubai",
       },
       {
+        name: "De Montfort University Dubai",
+        logo: "assets/images/uae/demontfort.png",
+        desc: "British university offering global career opportunities",
+      },
+      {
         name: "Curtin University Dubai",
         logo: "assets/images/uae/curtin.png",
         desc: "Australian university with Dubai campus",
+      },
+      {
+        name: "Heriot-Watt University Dubai",
+        logo: "assets/images/uae/heriotwatt.png",
+        desc: "Scottish university with focus on business, engineering, and design",
       },
     ],
     requirements: {

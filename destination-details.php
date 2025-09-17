@@ -21,7 +21,7 @@
 
     <div class="country-selector">
         <a href="?destination=Australia" class="country-btn">Australia</a>
-        <a href="?destination=Canada" class="country-btn">Canada</a>
+        <!-- <a href="?destination=Canada" class="country-btn">Canada</a> -->
         <a href="?destination=United Kingdom" class="country-btn">United Kingdom</a>
         <a href="?destination=United States" class="country-btn">United States</a>
         <a href="?destination=New Zealand" class="country-btn">New Zealand</a>
