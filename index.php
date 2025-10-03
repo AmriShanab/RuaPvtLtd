@@ -51,14 +51,14 @@ include 'navbar.php';
                 <p class="welcome-text">Whether you're planning your future, finding balance, or taking a break Rua is here to make it all feel effortless.</p>
                 <p class="welcome-tagline">No noise. Just quality, intention, and calm.</p>
             </div>
-            <div class="welcome-right sam">
+            <!-- <div class="welcome-right sam">
                 <div class="welcome-ornament right">
                     <svg viewBox="0 0 100 100" class="gold-ornament">
                         <path d="M50,10 L60,50 L90,50 L65,70 L75,90 L50,75 L25,90 L35,70 L10,50 L40,50 Z"
                             fill="#c99b32" opacity="0.8" />
                     </svg>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

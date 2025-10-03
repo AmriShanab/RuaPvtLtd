@@ -108,28 +108,29 @@ h2 {
     align-items: center;
 }
 
-.controls button:hover {
+.controls button:hover:not(:disabled) {
     background: #b89a85;
     color: white;
     transform: scale(1.1);
 }
 
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
 .carousel-container {
     position: relative;
+    overflow: hidden;
 }
 
 .carousel {
     display: flex;
-    overflow-x: auto;
     gap: 28px;
     padding: 25px 15px;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
 }
 
 .uni-card {
@@ -319,4 +320,24 @@ h2 {
     .uni-card {
         width: 240px;
     }
+    
+    .carousel {
+        gap: 20px;
+        padding: 20px 10px;
+    }
+}
+
+.chart-box {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Reduced height */
+}
+
+.chart-box canvas {
+    max-height: 350px !important; /* Force smaller chart size */
+    width: 100% !important;
 }

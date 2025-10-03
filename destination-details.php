@@ -15,7 +15,7 @@
     <div class="header">
         <div class="container">
             <h1 id="main-heading">Study Abroad Guide</h1>
-            <p id="sub-heading">Find Your Perfect Education Destination</p>
+            <!-- <p id="sub-heading">Find Your Perfect Education Destination</p> -->
         </div>
     </div>
 
@@ -30,21 +30,9 @@
 
     <div class="container">
         <section class="intro">
+            <h2 class="cinzel-font" id="sub-heading"></h2>
             <p id="country-description">Select a country to view education information.</p>
         </section>
-
-        <h2 id="cost-heading">Cost of Education</h2>
-        <div class="data-container">
-            <div class="chart-box">
-                <h3 class="chart-title" id="living-cost-title">Living Cost Per Year</h3>
-                <canvas id="livingCostChart"></canvas>
-            </div>
-
-            <div class="chart-box">
-                <h3 class="chart-title" id="tuition-title">Tuition Fee Range</h3>
-                <canvas id="tuitionFeeChart"></canvas>
-            </div>
-        </div>
 
         <section class="universities">
             <div class="section-header">
@@ -66,7 +54,17 @@
             <p class="status-text" id="uni-status">Select a country to view universities</p>
         </section>
 
-        <h2 id="requirements-heading">Entry Requirements</h2>
+
+        <h2 id="cost-heading">Cost of Education</h2>
+        <div class="data-container">
+            <div class="chart-box">
+                <h3 class="chart-title" id="living-cost-title">Living Cost Per Year</h3>
+                <canvas id="livingCostChart"></canvas>
+            </div>
+        </div>
+
+        
+        <!-- <h2 id="requirements-heading">Entry Requirements</h2>
         <div class="requirements">
             <div class="req-card">
                 <h3>Undergraduate Programs</h3>
@@ -88,7 +86,7 @@
                     <li>Select a country to view scholarship information</li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <?php include 'footer.php'; ?>

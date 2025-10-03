@@ -71,7 +71,7 @@ include 'navbar.php';
         <div class="oud-journey-content">
             <h2 class="oud-journey-title">Your Journey Awaits</h2>
             <p>For those who desire the rare, the timeless, and the authentic — Rua El Oud is your gateway. Contact us to source the finest oud oil, curated agarwood, and bespoke fragrances.</p>
-            <button class="oud-cta-button">Begin Your Oud Journey</button>
+            <!-- <button class="oud-cta-button">Begin Your Oud Journey</button> -->
         </div>
     </section>
 

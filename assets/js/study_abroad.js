@@ -2,8 +2,7 @@
 const countryData = {
   Australia: {
     title: "The Land Down Under!",
-    description:
-      "Australia is one of the most popular destinations for Sri Lankan students, offering worldclass universities, globally recognized degrees, and excellent career prospects. With programs in business, IT, engineering, health sciences, hospitality, and more, Australian qualifications are highly respected worldwide. Beyond academics, students enjoy a safe, multicultural society that values diversity and provides a strong Sri Lankan community for support—making Australia the ideal blend of quality education and rewarding lifestyle.",
+    description: "Australia is one of the most popular destinations for Sri Lankan students, offering worldclass universities, globally recognized degrees, and excellent career prospects. With programs in business, IT, engineering, health sciences, hospitality, and more, Australian qualifications are highly respected worldwide. Beyond academics, students enjoy a safe, multicultural society that values diversity and provides a strong Sri Lankan community for support—making Australia the ideal blend of quality education and rewarding lifestyle.",
     livingCost: 29710,
     tuitionRange: [20000, 50000],
     currency: "AUD",
@@ -114,8 +113,7 @@ const countryData = {
   },
   Canada: {
     title: "The Great White North!",
-    description:
-      "Canada is known for its high-quality education system, diverse culture, and welcoming environment for international students. Canadian degrees are recognized globally, and students can benefit from post-graduation work opportunities. With stunning natural landscapes and vibrant cities, Canada offers an exceptional study experience.",
+    description: "Canada is known for its high-quality education system, diverse culture, and welcoming environment for international students. Canadian degrees are recognized globally, and students can benefit from post-graduation work opportunities. With stunning natural landscapes and vibrant cities, Canada offers an exceptional study experience.",
     livingCost: 25000,
     tuitionRange: [15000, 40000],
     currency: "CAD",
@@ -332,8 +330,7 @@ enriching global experiences.`,
   },
   "New Zealand": {
     title: "New Zealand at a Glance!",
-    description:
-      "New Zealand is a fast-growing choice for Sri Lankan Students, Offering world-class universities, globally recognized degrees, and a safe, welcoming environment. With strong programs in business, IT, engineering, health sciences, hospitality, and more, New Zealand qualifications are highly respected worldwide. Beyond academics, students enjoy a high quality of life in a beautiful, multicultural society that values diversity and provides a strong Sri Lankan community for support—making New Zealand the ideal blend of quality education and rewarding lifestyle.",
+    description: "New Zealand is a fast-growing choice for Sri Lankan Students, Offering world-class universities, globally recognized degrees, and a safe, welcoming environment. With strong programs in business, IT, engineering, health sciences, hospitality, and more, New Zealand qualifications are highly respected worldwide. Beyond academics, students enjoy a high quality of life in a beautiful, multicultural society that values diversity and provides a strong Sri Lankan community for support—making New Zealand the ideal blend of quality education and rewarding lifestyle.",
     livingCost: 20000,
     tuitionRange: [20000, 35000],
     currency: "NZD",
@@ -459,7 +456,8 @@ welcoming home away from home.`,
 
 // Global chart instances
 let livingCostChartInstance = null;
-let tuitionFeeChartInstance = null;
+// let tuitionFeeChartInstance = null;
+let carousel = null;
 
 // Initialize the page
 document.addEventListener("DOMContentLoaded", function () {
@@ -472,23 +470,126 @@ document.addEventListener("DOMContentLoaded", function () {
     country = "Australia";
   }
 
-  // Set up navigation controls
-  const nextBtn = document.getElementById("next-btn");
-  const prevBtn = document.getElementById("prev-btn");
-
-  nextBtn.addEventListener("click", () => {
-    const container = document.getElementById("universities-container");
-    container.scrollBy({ left: 300, behavior: "smooth" });
-  });
-
-  prevBtn.addEventListener("click", () => {
-    const container = document.getElementById("universities-container");
-    container.scrollBy({ left: -300, behavior: "smooth" });
-  });
-
+  // Initialize carousel
+  carousel = new SmoothCarousel();
+  
   // Update content with the selected country
   updateContent(country);
 });
+
+// Smooth Carousel Class
+class SmoothCarousel {
+  constructor() {
+    this.carousel = document.getElementById('universities-container');
+    this.prevBtn = document.getElementById('prev-btn');
+    this.nextBtn = document.getElementById('next-btn');
+    this.currentPosition = 0;
+    this.isScrolling = false;
+    this.cardWidth = 308; // 280px card + 28px gap
+    this.autoScrollInterval = null;
+    
+    this.init();
+  }
+  
+  init() {
+    this.attachEventListeners();
+    this.updateButtonStates();
+    this.startAutoScroll(); // 🔥 start auto scrolling
+  }
+  
+  attachEventListeners() {
+    this.prevBtn.addEventListener('click', () => this.scroll('prev'));
+    this.nextBtn.addEventListener('click', () => this.scroll('next'));
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') this.scroll('prev');
+      if (e.key === 'ArrowRight') this.scroll('next');
+    });
+  }
+  
+  scroll(direction) {
+    if (this.isScrolling) return;
+    this.isScrolling = true;
+
+    const scrollAmount = this.cardWidth; // move 1 card at a time
+
+    if (direction === 'next') {
+      this.currentPosition -= scrollAmount;
+    } else {
+      this.currentPosition += scrollAmount;
+    }
+
+    this.applyBoundaries();
+    this.smoothScrollTo(this.currentPosition);
+
+    setTimeout(() => {
+      this.isScrolling = false;
+      this.updateButtonStates();
+    }, 500);
+  }
+  
+  applyBoundaries() {
+    const cards = this.carousel.querySelectorAll('.uni-card');
+    const maxScroll = -((cards.length - 1) * this.cardWidth);
+    
+    if (this.currentPosition > 0) this.currentPosition = 0;
+    if (this.currentPosition < maxScroll) this.currentPosition = maxScroll;
+  }
+  
+  smoothScrollTo(position) {
+    this.carousel.style.transition = "transform 0.8s ease-in-out";
+    this.carousel.style.transform = `translateX(${position}px)`;
+  }
+  
+  updateButtonStates() {
+    const cards = this.carousel.querySelectorAll('.uni-card');
+    const maxScroll = -((cards.length - 1) * this.cardWidth);
+
+    if (cards.length <= 3) {
+      this.prevBtn.style.display = 'none';
+      this.nextBtn.style.display = 'none';
+      return;
+    }
+
+    this.prevBtn.style.display = 'flex';
+    this.nextBtn.style.display = 'flex';
+
+    this.prevBtn.disabled = this.currentPosition >= 0;
+    this.nextBtn.disabled = this.currentPosition <= maxScroll;
+  }
+
+  reset() {
+    this.currentPosition = 0;
+    this.smoothScrollTo(0);
+    this.updateButtonStates();
+  }
+
+  // 🔥 Auto Scroll
+  startAutoScroll() {
+    this.stopAutoScroll(); // avoid duplicates
+    this.autoScrollInterval = setInterval(() => {
+      const cards = this.carousel.querySelectorAll('.uni-card');
+      const maxScroll = -((cards.length - 1) * this.cardWidth);
+
+      if (this.currentPosition <= maxScroll) {
+        this.currentPosition = 0; // reset to start
+      } else {
+        this.currentPosition -= 1; // move 1px slowly
+      }
+
+      this.carousel.style.transition = "transform 0.05s linear";
+      this.carousel.style.transform = `translateX(${this.currentPosition}px)`;
+    }, 30); // smaller = faster
+  }
+
+  stopAutoScroll() {
+    if (this.autoScrollInterval) {
+      clearInterval(this.autoScrollInterval);
+      this.autoScrollInterval = null;
+    }
+  }
+}
+
 
 // Update page content based on country
 function updateContent(country) {
@@ -503,9 +604,6 @@ function updateContent(country) {
   document.getElementById(
     "living-cost-title"
   ).textContent = `Living Cost Per Year (${data.currency})`;
-  document.getElementById(
-    "tuition-title"
-  ).textContent = `Tuition Fee Range (${data.currency})`;
 
   // Update universities
   const universitiesContainer = document.getElementById(
@@ -518,7 +616,7 @@ function updateContent(country) {
     uniCard.className = "uni-card";
     uniCard.innerHTML = `
             <div class="logo-container">
-                <img src="${uni.logo}" alt="${uni.name} logo" class="uni-logo">
+                <img src="${uni.logo}" alt="${uni.name} logo" class="uni-logo" onerror="this.src='assets/images/default-uni.png'">
             </div>
             <h3 class="uni-name">${uni.name}</h3>
             <p class="uni-desc">${uni.desc}</p>
@@ -532,19 +630,24 @@ function updateContent(country) {
   ).textContent = `Showing ${data.universities.length} universities in ${country}`;
 
   // Update requirements
-  document.getElementById("ug-requirements").innerHTML = `
-        <li>${data.requirements.undergraduate}</li>
-        <li>English Proficiency: ${data.requirements.english}</li>
-    `;
+  // document.getElementById("ug-requirements").innerHTML = `
+  //       <li>${data.requirements.undergraduate}</li>
+  //       <li>English Proficiency: ${data.requirements.english}</li>
+  //   `;
 
-  document.getElementById("pg-requirements").innerHTML = `
-        <li>${data.requirements.postgraduate}</li>
-        <li>English Proficiency: ${data.requirements.english}</li>
-    `;
+  // document.getElementById("pg-requirements").innerHTML = `
+  //       <li>${data.requirements.postgraduate}</li>
+  //       <li>English Proficiency: ${data.requirements.english}</li>
+  //   `;
 
-  document.getElementById("scholarships").innerHTML = `
-        <li>${data.requirements.scholarships}</li>
-    `;
+  // document.getElementById("scholarships").innerHTML = `
+  //       <li>${data.requirements.scholarships}</li>
+  //   `;
+
+  // Reset carousel position
+  if (carousel) {
+    carousel.reset();
+  }
 
   // Update charts
   updateCharts(data);
@@ -552,11 +655,14 @@ function updateContent(country) {
 
 // Update charts with country data
 function updateCharts(data) {
-  // Living Cost Chart
-  const livingCostCtx = document
-    .getElementById("livingCostChart")
-    .getContext("2d");
+  // Update Living Cost Title
+  document.getElementById("living-cost-title").textContent = 
+    `Living Cost Per Year (${data.currency})`;
 
+  // Living Cost Chart
+  const livingCostCtx = document.getElementById("livingCostChart").getContext("2d");
+
+  // Destroy previous chart instance if exists
   if (livingCostChartInstance) {
     livingCostChartInstance.destroy();
   }
@@ -564,90 +670,72 @@ function updateCharts(data) {
   livingCostChartInstance = new Chart(livingCostCtx, {
     type: "pie",
     data: {
-      labels: ["Accommodation", "Food", "Transport", "Other Expenses"],
+      labels: ["Accommodation", "Food", "Transport", "Other"],
       datasets: [
         {
+          label: `Living Costs (${data.currency})`,
           data: [
             data.costBreakdown.accommodation,
             data.costBreakdown.food,
             data.costBreakdown.transport,
             data.costBreakdown.other,
           ],
-          backgroundColor: ["#220000", "#8B0000", "#A52A2A", "#ccc0b2"],
-          borderWidth: 1,
+          backgroundColor: [
+            "#8B0000", // Dark Red (Rich Maroon)
+            "#B8860B", // Dark Goldenrod (Elegant Gold)
+            "#A52A2A", // Brown (Warm Maroon)
+            "#D4AF37"  // Metallic Gold (Premium Gold)
+          ],
+          borderColor: [
+            "#600000", // Darker Maroon border
+            "#8B6914", // Darker Gold border
+            "#7A1F1F", // Darker Brown border
+            "#B8860B"  // Dark Goldenrod border
+          ],
+          borderWidth: 2,
         },
       ],
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: "bottom",
+          labels: {
+            color: "#220000",
+            font: {
+              family: "'Times New Roman', serif",
+              size: 12
+            },
+            padding: 15
+          }
         },
         tooltip: {
-          callbacks: {
-            label: function (context) {
-              return (
-                context.label +
-                ": " +
-                data.currency +
-                " " +
-                context.raw.toLocaleString()
-              );
-            },
-          },
-        },
-      },
-    },
-  });
-
-  // Tuition Fee Chart
-  const tuitionFeeCtx = document
-    .getElementById("tuitionFeeChart")
-    .getContext("2d");
-
-  if (tuitionFeeChartInstance) {
-    tuitionFeeChartInstance.destroy();
-  }
-
-  tuitionFeeChartInstance = new Chart(tuitionFeeCtx, {
-    type: "bar",
-    data: {
-      labels: ["Minimum", "Average", "Maximum"],
-      datasets: [
-        {
-          label: data.currency,
-          data: [
-            data.tuitionRange[0],
-            (data.tuitionRange[0] + data.tuitionRange[1]) / 2,
-            data.tuitionRange[1],
-          ],
-          backgroundColor: "#220000",
-          borderColor: "#220000",
+          backgroundColor: "rgba(34, 0, 0, 0.9)",
+          titleColor: "#ccc0b2",
+          bodyColor: "#f0e6e0",
+          borderColor: "#8a5a44",
           borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: `${data.currency}`,
-          },
-        },
-      },
-      plugins: {
-        tooltip: {
           callbacks: {
-            label: function (context) {
-              return data.currency + " " + context.raw.toLocaleString();
-            },
-          },
-        },
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.raw || 0;
+              const total = context.dataset.data.reduce((a, b) => a + b, 0);
+              const percentage = Math.round((value / total) * 100);
+              return `${label}: ${data.currency} ${value.toLocaleString()} (${percentage}%)`;
+            }
+          }
+        }
       },
+      layout: {
+        padding: {
+          top: 10,
+          bottom: 10,
+          left: 10,
+          right: 10
+        }
+      }
     },
   });
 }

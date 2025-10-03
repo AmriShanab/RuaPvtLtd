@@ -33,7 +33,7 @@ include 'world_map.php';
 
 <div class="testimonials-section">
     <div class="testimonial-curve"></div>
-    <h2 class="section-title">Student Experiences</h2>
+    <h2 class="section-title">Student Spot Lights</h2>
     <p class="section-subtitle">Hear from our global scholars</p>
 
     <div class="testimonials-container">

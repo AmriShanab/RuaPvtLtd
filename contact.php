@@ -44,7 +44,7 @@ include 'navbar.php';
         <div class="contact-main-container">
             <div class="contact-intro-section">
                 <h1 class="contact-main-heading">Let's Connect</h1>
-                <p class="contact-intro-text">We value every connection. Whether you're seeking guidance on studying abroad, exploring our oud collections, or inquiring about our recreational services, our team is here to assist you with clarity and care.</p>
+                <p class="contact-intro-text">We value every connection. Whether you're seeking guidance on studying abroad, exploring our oud collections, or inquiring about our recreational services, our team is here to assist you with clarity and care. Please feel free to get in touch — we look forward to hearing from you.</p>
                 
                 <div class="contact-method-item">
                     <div class="contact-method-icon">
@@ -126,7 +126,7 @@ include 'navbar.php';
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div>
-                    <p>No. 78, Havelock Road,<br>Colombo 05, Sri Lanka</p>
+                    <p>No. 252 A, Galle Road,<br>Colombo 04, Sri Lanka</p>
                 </div>
             </div>
         </div>
@@ -149,9 +149,7 @@ include 'navbar.php';
                     <i class="far fa-clock"></i>
                 </div>
                 <div>
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
-                    Saturday: 10:00 AM - 2:00 PM<br>
-                    Sunday: Closed</p>
+                    <p>Monday - Sunday: By Appointment Only</p>
                 </div>
             </div>
         </div>

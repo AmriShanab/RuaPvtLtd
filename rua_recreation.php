@@ -352,7 +352,7 @@ include 'navbar.php'
         <!-- <div class="rec-wave"></div> -->
         <h2 class="rec-cta-title cinzel-font">Your Balanced Experience Awaits</h2>
         <p style="max-width: 100%; margin: 0 auto 2rem; padding: 0 1rem;">Contact us to plan your next experience and let Rua Recreation make every moment count.</p>
-        <button class="rec-cta-button">Begin Your Journey</button>
+        <!-- <button class="rec-cta-button">Begin Your Journey</button> -->
     </section>
 
     <script>
