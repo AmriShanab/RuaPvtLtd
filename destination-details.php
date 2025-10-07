@@ -42,7 +42,7 @@
                     <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-            
+
             <div class="carousel-container">
                 <div class="carousel" id="universities-container">
                     <div class="uni-card">
@@ -50,47 +50,50 @@
                     </div>
                 </div>
             </div>
-            
+
             <p class="status-text" id="uni-status">Select a country to view universities</p>
         </section>
 
-
-        <h2 id="cost-heading">Cost of Education</h2>
-        <div class="data-container">
-            <div class="chart-box">
-                <h3 class="chart-title" id="living-cost-title">Living Cost Per Year</h3>
-                <canvas id="livingCostChart"></canvas>
+        <h2 id="cost-heading">Key Information</h2>
+        <div class="pyramid-container">
+            <div class="pyramid">
+                <div class="pyramid-row level-1">
+                    <div class="pyramid-box">
+                        <h3>Living Cost</h3>
+                        <p class="hover-info">Living Cost Per Year - USD 12,000 - USD 15,000</p>
+                    </div>
+                </div>
+                <div class="pyramid-row level-2">
+                    <div class="pyramid-box">
+                        <h3>Tuition Fee</h3>
+                        <p class="hover-info">Tuition Fee - USD 25,000 - USD 45,000</p>
+                    </div>
+                </div>
+                <div class="pyramid-row level-3">
+                    <div class="pyramid-box">
+                        <h3>Entry Requirements</h3>
+                        <p class="hover-info">UG - A/Ls 3C passes / PG - 65% or more</p>
+                    </div>
+                </div>
+                <div class="pyramid-row level-4">
+                    <div class="pyramid-box">
+                        <h3>English Proficiency</h3>
+                        <p class="hover-info">IELTS or PTE</p>
+                    </div>
+                </div>
+                <div class="pyramid-row level-5">
+                    <div class="pyramid-box">
+                        <h3>Scholarships</h3>
+                        <p class="hover-info">Various scholarships available for international students</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        
-        <!-- <h2 id="requirements-heading">Entry Requirements</h2>
-        <div class="requirements">
-            <div class="req-card">
-                <h3>Undergraduate Programs</h3>
-                <ul id="ug-requirements">
-                    <li>Select a country to view requirements</li>
-                </ul>
-            </div>
-
-            <div class="req-card">
-                <h3>Postgraduate Programs</h3>
-                <ul id="pg-requirements">
-                    <li>Select a country to view requirements</li>
-                </ul>
-            </div>
-
-            <div class="req-card">
-                <h3>Scholarships</h3>
-                <ul id="scholarships">
-                    <li>Select a country to view scholarship information</li>
-                </ul>
-            </div>
-        </div> -->
     </div>
 
     <?php include 'footer.php'; ?>
-    
+
     <script src="assets/js/study_abroad.js"></script>
 </body>
 

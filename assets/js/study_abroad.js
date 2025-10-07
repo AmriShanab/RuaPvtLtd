@@ -455,8 +455,6 @@ welcoming home away from home.`,
 };
 
 // Global chart instances
-let livingCostChartInstance = null;
-// let tuitionFeeChartInstance = null;
 let carousel = null;
 
 // Initialize the page
@@ -590,7 +588,6 @@ class SmoothCarousel {
   }
 }
 
-
 // Update page content based on country
 function updateContent(country) {
   const data = countryData[country];
@@ -599,11 +596,6 @@ function updateContent(country) {
   document.getElementById("main-heading").textContent = data.title;
   document.getElementById("sub-heading").textContent = `Study in ${country}`;
   document.getElementById("country-description").textContent = data.description;
-
-  // Update cost headings
-  document.getElementById(
-    "living-cost-title"
-  ).textContent = `Living Cost Per Year (${data.currency})`;
 
   // Update universities
   const universitiesContainer = document.getElementById(
@@ -629,113 +621,34 @@ function updateContent(country) {
     "uni-status"
   ).textContent = `Showing ${data.universities.length} universities in ${country}`;
 
-  // Update requirements
-  // document.getElementById("ug-requirements").innerHTML = `
-  //       <li>${data.requirements.undergraduate}</li>
-  //       <li>English Proficiency: ${data.requirements.english}</li>
-  //   `;
-
-  // document.getElementById("pg-requirements").innerHTML = `
-  //       <li>${data.requirements.postgraduate}</li>
-  //       <li>English Proficiency: ${data.requirements.english}</li>
-  //   `;
-
-  // document.getElementById("scholarships").innerHTML = `
-  //       <li>${data.requirements.scholarships}</li>
-  //   `;
-
   // Reset carousel position
   if (carousel) {
     carousel.reset();
   }
 
-  // Update charts
-  updateCharts(data);
+  // Update pyramid boxes with country-specific data
+  updatePyramid(data);
 }
 
-// Update charts with country data
-function updateCharts(data) {
-  // Update Living Cost Title
-  document.getElementById("living-cost-title").textContent = 
-    `Living Cost Per Year (${data.currency})`;
-
-  // Living Cost Chart
-  const livingCostCtx = document.getElementById("livingCostChart").getContext("2d");
-
-  // Destroy previous chart instance if exists
-  if (livingCostChartInstance) {
-    livingCostChartInstance.destroy();
-  }
-
-  livingCostChartInstance = new Chart(livingCostCtx, {
-    type: "pie",
-    data: {
-      labels: ["Accommodation", "Food", "Transport", "Other"],
-      datasets: [
-        {
-          label: `Living Costs (${data.currency})`,
-          data: [
-            data.costBreakdown.accommodation,
-            data.costBreakdown.food,
-            data.costBreakdown.transport,
-            data.costBreakdown.other,
-          ],
-          backgroundColor: [
-            "#8B0000", // Dark Red (Rich Maroon)
-            "#B8860B", // Dark Goldenrod (Elegant Gold)
-            "#A52A2A", // Brown (Warm Maroon)
-            "#D4AF37"  // Metallic Gold (Premium Gold)
-          ],
-          borderColor: [
-            "#600000", // Darker Maroon border
-            "#8B6914", // Darker Gold border
-            "#7A1F1F", // Darker Brown border
-            "#B8860B"  // Dark Goldenrod border
-          ],
-          borderWidth: 2,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: "bottom",
-          labels: {
-            color: "#220000",
-            font: {
-              family: "'Times New Roman', serif",
-              size: 12
-            },
-            padding: 15
-          }
-        },
-        tooltip: {
-          backgroundColor: "rgba(34, 0, 0, 0.9)",
-          titleColor: "#ccc0b2",
-          bodyColor: "#f0e6e0",
-          borderColor: "#8a5a44",
-          borderWidth: 1,
-          callbacks: {
-            label: function(context) {
-              const label = context.label || '';
-              const value = context.raw || 0;
-              const total = context.dataset.data.reduce((a, b) => a + b, 0);
-              const percentage = Math.round((value / total) * 100);
-              return `${label}: ${data.currency} ${value.toLocaleString()} (${percentage}%)`;
-            }
-          }
-        }
-      },
-      layout: {
-        padding: {
-          top: 10,
-          bottom: 10,
-          left: 10,
-          right: 10
-        }
-      }
-    },
-  });
+// Update pyramid boxes with country-specific data
+function updatePyramid(data) {
+  // Box 1: Living Cost
+  document.getElementById("box1").querySelector(".hover-info").textContent = 
+    `Living Cost Per Year - ${data.currency} ${data.livingCost.toLocaleString()}`;
+  
+  // Box 2: Tuition Fee
+  document.getElementById("box2").querySelector(".hover-info").textContent = 
+    `Tuition Fee - ${data.currency} ${data.tuitionRange[0].toLocaleString()} - ${data.tuitionRange[1].toLocaleString()}`;
+  
+  // Box 3: Entry Requirements
+  document.getElementById("box3").querySelector(".hover-info").textContent = 
+    `UG - ${data.requirements.undergraduate} / PG - ${data.requirements.postgraduate}`;
+  
+  // Box 4: English Proficiency
+  document.getElementById("box4").querySelector(".hover-info").textContent = 
+    data.requirements.english;
+  
+  // Box 5: Scholarships
+  document.getElementById("box5").querySelector(".hover-info").textContent = 
+    data.requirements.scholarships;
 }

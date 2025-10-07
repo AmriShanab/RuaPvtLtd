@@ -341,3 +341,112 @@ h2 {
     max-height: 350px !important; /* Force smaller chart size */
     width: 100% !important;
 }
+
+.pyramid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Base pyramid row */
+.pyramid-row {
+  margin: 8px 0;
+}
+
+/* Common box styles */
+.pyramid-box {
+  height: 80px;
+  background: linear-gradient(135deg, #500a0a, #a30f0f);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: visible; /* allow tooltip to show outside */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.pyramid-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #A52A2A, #8B0000);
+}
+
+.pyramid-box h3 {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Cinzel', serif;
+}
+
+/* Tooltip (instead of full overlay) */
+.hover-info {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(139, 0, 0, 0.95);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Tooltip arrow */
+.hover-info::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(139, 0, 0, 0.95) transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.pyramid-box:hover .hover-info {
+  opacity: 1;
+}
+
+/* Pyramid layer widths */
+.level-1 .pyramid-box { width: 180px; }
+.level-2 .pyramid-box { width: 260px; }
+.level-3 .pyramid-box { width: 340px; }
+.level-4 .pyramid-box { width: 420px; }
+.level-5 .pyramid-box { width: 500px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .level-1 .pyramid-box { width: 140px; height: 70px; }
+  .level-2 .pyramid-box { width: 170px; }
+  .level-3 .pyramid-box { width: 200px; }
+  .level-4 .pyramid-box { width: 230px; }
+  .level-5 .pyramid-box { width: 260px; }
+}
+
+@media (max-width: 480px) {
+  .level-1 .pyramid-box { width: 120px; height: 60px; }
+  .level-2 .pyramid-box { width: 140px; }
+  .level-3 .pyramid-box { width: 160px; }
+  .level-4 .pyramid-box { width: 180px; }
+  .level-5 .pyramid-box { width: 200px; }
+  .hover-info { font-size: 12px; padding: 6px 8px; }
+}

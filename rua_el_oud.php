@@ -32,7 +32,7 @@ include 'navbar.php';
     <section class="oud-section">
         <div class="oud-decoration oud-decoration-1"></div>
         <div class="oud-product-container">
-            <div class="oud-product-image" style="background-image: url('assets/images/photo-1682482003115-b6abbd9e6834.avif');"></div>
+            <div class="oud-product-image" style="background-image: url('assets/images/pure_agarwood_oil.jpg');"></div>
             <div class="oud-product-content">
                 <h2 class="oud-product-title">Pure Agarwood Oil</h2>
                 <span class="oud-product-subtitle">"A single drop holds centuries — the soul of the forest, bottled for you."</span>
@@ -45,7 +45,7 @@ include 'navbar.php';
     <section class="oud-section">
         <div class="oud-decoration oud-decoration-2"></div>
         <div class="oud-product-container">
-            <div class="oud-product-image" style="background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <div class="oud-product-image" style="background-image: url('assets/images/raw_agarwood.jpg');"></div>
             <div class="oud-product-content">
                 <h2 class="oud-product-title">Raw Agarwood</h2>
                 <span class="oud-product-subtitle">"Nature's rarest wood, where every grain whispers a hidden story."</span>
@@ -57,7 +57,7 @@ include 'navbar.php';
     <!-- Fragrances Inspired by Oud -->
     <section class="oud-section">
         <div class="oud-product-container">
-            <div class="oud-product-image" style="background-image: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <div class="oud-product-image" style="background-image: url('assets/images/fragrances.jpg');"></div>
             <div class="oud-product-content">
                 <h2 class="oud-product-title">Fragrances Inspired by Oud</h2>
                 <span class="oud-product-subtitle">"The past and present entwined — a scent that lingers beyond time."</span>

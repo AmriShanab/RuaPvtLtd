@@ -288,7 +288,7 @@ include 'navbar.php'
         <h2 class="rec-section-title cinzel-font">Our Experiences</h2>
         <div class="rec-experiences">
             <div class="rec-experience">
-                <div class="rec-experience-image" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="rec-experience-image" style="background-image: url('assets/images/serene_escapes.jpg');"></div>
                 <div class="rec-experience-content">
                     <h3 class="rec-experience-title cinzel-font">Serene Escapes</h3>
                     <p class="rec-experience-desc">Step into holiday rentals where the world slows down and your senses awaken. Designed for complete rejuvenation.</p>
@@ -304,15 +304,15 @@ include 'navbar.php'
             </div>
             
             <div class="rec-experience">
-                <div class="rec-experience-image" style="background-image: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="rec-experience-image" style="background-image: url('assets/images/indoor_football.jpg');"></div>
                 <div class="rec-experience-content">
-                    <h3 class="rec-experience-title cinzel-font">Outdoor Football</h3>
+                    <h3 class="rec-experience-title cinzel-font">Indoor Football</h3>
                     <p class="rec-experience-desc">The thrill of competition meets the joy of movement in our premium indoor facilities.</p>
                 </div>
             </div>
             
             <div class="rec-experience">
-                <div class="rec-experience-image" style="background-image: url('https://media.istockphoto.com/id/465383082/photo/female-swimmer-at-the-swimming-pool.jpg?s=612x612&w=0&k=20&c=tcTwN2rTvUBK4wddan_GUCxrXX6bBoU-hyrVMvmT0BM=');"></div>
+                <div class="rec-experience-image" style="background-image: url('assets/images/pool_activities.jpg');"></div>
                 <div class="rec-experience-content">
                     <h3 class="rec-experience-title cinzel-font">Pool Activities</h3>
                     <p class="rec-experience-desc">Refresh your body and mind with our curated aquatic experiences.</p>
@@ -320,7 +320,7 @@ include 'navbar.php'
             </div>
             
             <div class="rec-experience">
-                <div class="rec-experience-image" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="rec-experience-image" style="background-image: url('assets/images/meditation.jpg');"></div>
                 <div class="rec-experience-content">
                     <h3 class="rec-experience-title cinzel-font">Mindful Meditation</h3>
                     <p class="rec-experience-desc">Guided sessions to help you find your center and reconnect with yourself.</p>
@@ -328,7 +328,7 @@ include 'navbar.php'
             </div>
             
             <div class="rec-experience">
-                <div class="rec-experience-image" style="background-image: url('https://media.istockphoto.com/id/1487463904/photo/happy-friends-browsing-social-media-on-smartphone-in-a-cafe.jpg?s=612x612&w=0&k=20&c=AXI-drxXu6Mq3zjbp2eVZe3CCghTEBvmPW_x-cIOC2Y=');"></div>
+                <div class="rec-experience-image" style="background-image: url('assets/images/social_spaces.jpg');"></div>
                 <div class="rec-experience-content">
                     <h3 class="rec-experience-title cinzel-font">Social Spaces</h3>
                     <p class="rec-experience-desc">Connect with friends over games, meals, or shared moments of stillness.</p>
