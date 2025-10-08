@@ -12,7 +12,7 @@
         <a href="https://www.facebook.com/share/1Mtw2nNSu8/?mibextid=wwXIfr" class="social-icon"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/rua_eduventure?igsh=dGJkb2hnc2dkejI%3D&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
         <a href="www.linkedin.com/in/rua-pvt-ltd-08767437a6" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <!-- <a href="#" class="social-icon"><i class="fab fa-x"></i></a> -->
+        <a href="https://wa.me/94707770883" class="social-icon"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
 
