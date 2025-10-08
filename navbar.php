@@ -21,7 +21,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
   <!-- Open Graph (Facebook & LinkedIn) -->
   <meta property="og:title" content="RUA (PVT) LTD | Global Education & Travel">
   <meta property="og:description" content="Explore study abroad programs, travel experiences, and global education services with RUA (Pvt) Ltd.">
-  <meta property="og:image" content="https://rua.international/assets/images/logo.png">
+  <meta property="og:image" content="https://rua.international/assets/images/Only_logo.png">
   <meta property="og:url" content="https://rua.international">
   <meta property="og:type" content="website">
 
@@ -33,9 +33,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
   <!-- Favicon & App Icons -->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/Logo.pdf.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo.pdf.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/Logo.pdf.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/Only_logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Only_logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/Only_logo.png">
   <link rel="manifest" href="assets/images/site.webmanifest">
 
   <!-- Stylesheets -->

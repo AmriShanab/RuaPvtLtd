@@ -4,6 +4,7 @@ include 'navbar.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +19,9 @@ include 'navbar.php';
             --gold: #D4AF37;
             --darkgold: #c89f28;
         }
-
     </style>
 </head>
+
 <body class="contact-page-body">
     <div class="blur-overlay top-blur"></div>
     <div class="blur-overlay bottom-blur"></div>
@@ -45,7 +46,7 @@ include 'navbar.php';
             <div class="contact-intro-section">
                 <h1 class="contact-main-heading">Let's Connect</h1>
                 <p class="contact-intro-text">We value every connection. Whether you're seeking guidance on studying abroad, exploring our oud collections, or inquiring about our recreational services, our team is here to assist you with clarity and care. Please feel free to get in touch — we look forward to hearing from you.</p>
-                
+
                 <div class="contact-method-item">
                     <div class="contact-method-icon">
                         <i class="fas fa-phone-alt"></i>
@@ -55,7 +56,7 @@ include 'navbar.php';
                         <p style="text-align: center">+94 70 777 0883</p>
                     </div>
                 </div>
-                
+
                 <div class="contact-method-item">
                     <div class="contact-method-icon">
                         <i class="fas fa-envelope"></i>
@@ -66,19 +67,19 @@ include 'navbar.php';
                     </div>
                 </div>
             </div>
-            
+
             <div class="contact-form-wrapper">
                 <form id="contactForm">
                     <div class="contact-form-group">
                         <input type="text" id="contact-name" class="contact-form-input" placeholder=" " required>
                         <label for="contact-name" class="contact-form-label">Full Name</label>
                     </div>
-                    
+
                     <div class="contact-form-group">
                         <input type="email" id="contact-email" class="contact-form-input" placeholder=" " required>
                         <label for="contact-email" class="contact-form-label">Email Address</label>
                     </div>
-                    
+
                     <div class="contact-form-group">
                         <div class="contact-phone-group">
                             <select id="contact-country" class="contact-form-input contact-country-select">
@@ -92,7 +93,7 @@ include 'navbar.php';
                             <label for="contact-phone" class="contact-form-label" style="left: 120px;">Phone Number</label>
                         </div>
                     </div>
-                    
+
                     <div class="contact-form-group">
                         <select id="contact-inquiry" class="contact-form-input" required>
                             <option value="" disabled selected></option>
@@ -103,12 +104,12 @@ include 'navbar.php';
                         </select>
                         <label for="contact-inquiry" class="contact-form-label">Inquiry Type</label>
                     </div>
-                    
+
                     <div class="contact-form-group">
                         <textarea id="contact-message" class="contact-form-input" rows="4" placeholder=" " required></textarea>
                         <label for="contact-message" class="contact-form-label">Your Message</label>
                     </div>
-                    
+
                     <button type="submit" class="contact-submit-btn">
                         Send Message
                         <i class="fas fa-paper-plane"></i>
@@ -117,7 +118,7 @@ include 'navbar.php';
             </div>
         </div>
     </section>
-    
+
     <section class="contact-details-section">
         <div class="contact-detail-card">
             <h3 class="contact-detail-heading">Visit Us</h3>
@@ -130,18 +131,21 @@ include 'navbar.php';
                 </div>
             </div>
         </div>
-        
+
         <div class="contact-detail-card">
             <h3 class="contact-detail-heading">Social Media</h3>
             <div class="contact-social-links">
-                <a href="#" class="contact-social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/94707770883" class="contact-social-link" title="WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
                 <a href="https://www.instagram.com/rua_eduventure?igsh=dGJkb2hnc2dkejI%3D&utm_source=qr" class="contact-social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/share/1Mtw2nNSu8/?mibextid=wwXIfr" class="contact-social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="www.linkedin.com/in/rua-pvt-ltd-08767437a6" class="contact-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="contact-social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <!-- <a href="#" class="contact-social-link" title="TikTok"><i class="fab fa-tiktok"></i></a> -->
             </div>
         </div>
-        
+
         <div class="contact-detail-card">
             <h3 class="contact-detail-heading">Business Hours</h3>
             <div class="contact-method-item">
@@ -159,13 +163,13 @@ include 'navbar.php';
         // Form submission handling with animation
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Add submission animation
             const form = e.target;
             form.style.transform = 'translateY(10px)';
             form.style.opacity = '0.8';
             form.style.transition = 'all 0.3s ease';
-            
+
             // Simulate processing
             setTimeout(() => {
                 // Construct mailto link
@@ -175,12 +179,12 @@ include 'navbar.php';
                 const phone = document.getElementById('contact-phone').value;
                 const inquiry = document.getElementById('contact-inquiry').value;
                 const message = document.getElementById('contact-message').value;
-                
+
                 const subject = `Contact Form: ${inquiry}`;
                 const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${country} ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-                
+
                 window.location.href = `mailto:ceo@rua.international?subject=${encodeURIComponent(subject)}&body=${body}`;
-                
+
                 // Reset form animation
                 form.style.transform = 'translateY(0)';
                 form.style.opacity = '1';
@@ -195,7 +199,9 @@ include 'navbar.php';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, { threshold: 0.1 });
+        }, {
+            threshold: 0.1
+        });
 
         document.querySelectorAll('.contact-form-group, .contact-detail-card').forEach((el, index) => {
             el.style.opacity = '0';
@@ -205,6 +211,7 @@ include 'navbar.php';
         });
     </script>
 </body>
+
 </html>
 
 <?php
