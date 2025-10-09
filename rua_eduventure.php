@@ -33,7 +33,7 @@ include 'world_map.php';
 
 <div class="testimonials-section">
     <div class="testimonial-curve"></div>
-    <h2 class="section-title">Student Spot Lights</h2>
+    <h2 class="section-title">Student SPOTLIGHTS</h2>
     <p class="section-subtitle">Hear from our global scholars</p>
 
     <div class="testimonials-container">
@@ -166,17 +166,17 @@ include 'footer.php';
         "Middlesex University (MDX)": "assets/images/logos/mdx-logo.png",
         "Deakin University": "assets/images/logos/deakin-logo.png",
         "La Trobe University": "assets/images/logos/latrobe-logo.png",
-        "University of Tasmania": "assets/images/logos/tasmania-logo.png",
+        "University of Tasmania": "assets/images/logos/tasmania.png",
         "University of New South Wales": "assets/images/logos/unsw-logo.png",
         "Coventry University": "assets/images/logos/coventry-logo.png",
         "Heriot-Watt University": "assets/images/logos/heriotwatt-logo.png",
-        "University of Law": "assets/images/logos/law.jpg",
+        "University of Law": "assets/images/logos/law-removebg-preview.png",
         "Anglia Ruskin University": "assets/images/logos/anglia-logo.png",
         "Teeside University": "assets/images/logos/teeside-logo.png",
         "Auckland University of Technology": "assets/images/logos/aut-logo.png",
         "University of Waikato": "assets/images/logos/waikato-logo.png",
         "ICN Business School": "assets/images/logos/icn-logo.png",
-        "Emirates Maritime Academy (EMA)": "assets/images/logos/eima.jpg",
+        "Emirates Maritime Academy (EMA)": "assets/images/logos/eima.png",
         "Curtin University Dubai": "assets/images/logos/curtin-logo.png",
         "University of Hertfordshire": "assets/images/logos/hertfordshire-logo.png",
         "University of Bristol": "assets/images/logos/university_of_bristol.png",

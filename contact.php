@@ -153,7 +153,7 @@ include 'navbar.php';
                     <i class="far fa-clock"></i>
                 </div>
                 <div>
-                    <p>Monday - Sunday: By Appointment Only</p>
+                    <p>Monday - Sunday: Based on Appointment</p>
                 </div>
             </div>
         </div>

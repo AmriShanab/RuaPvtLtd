@@ -98,8 +98,8 @@ h2 {
     height: 42px;
     border-radius: 50%;
     border: none;
-    background: #f0e6e0;
-    color: #8a5a44;
+    background: #ffffff;
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -109,7 +109,7 @@ h2 {
 }
 
 .controls button:hover:not(:disabled) {
-    background: #b89a85;
+    background: #ffffff;
     color: white;
     transform: scale(1.1);
 }
@@ -363,67 +363,41 @@ h2 {
 
 /* Common box styles */
 .pyramid-box {
-  height: 80px;
-  background: linear-gradient(135deg, #500a0a, #a30f0f);
+  background: #220000;
   color: white;
   display: flex;
+  flex-direction: column; /* stack title + info */
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  cursor: pointer;
   position: relative;
-  overflow: visible; /* allow tooltip to show outside */
+  overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  padding: 10px 12px;
+  height: auto; /* allow auto height for longer text */
 }
 
 .pyramid-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #A52A2A, #8B0000);
+  background: linear-gradient(135deg, #5e1b1b, #4d0101);
 }
 
 .pyramid-box h3 {
-  margin: 0;
+  margin: 6px 0;
   font-size: 16px;
   font-family: 'Cinzel', serif;
+  color: #fff;
 }
 
-/* Tooltip (instead of full overlay) */
-.hover-info {
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(139, 0, 0, 0.95);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
+.pyramid-box .info {
   font-size: 14px;
   line-height: 1.4;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-/* Tooltip arrow */
-.hover-info::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -6px;
-  border-width: 6px;
-  border-style: solid;
-  border-color: rgba(139, 0, 0, 0.95) transparent transparent transparent;
-}
-
-/* Show tooltip on hover */
-.pyramid-box:hover .hover-info {
-  opacity: 1;
+  margin-top: 4px;
+  color: #fceaea;
+  max-width: 90%;
 }
 
 /* Pyramid layer widths */
@@ -435,18 +409,32 @@ h2 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .level-1 .pyramid-box { width: 140px; height: 70px; }
+  .level-1 .pyramid-box { width: 140px; }
   .level-2 .pyramid-box { width: 170px; }
   .level-3 .pyramid-box { width: 200px; }
   .level-4 .pyramid-box { width: 230px; }
   .level-5 .pyramid-box { width: 260px; }
+
+  .pyramid-box h3 {
+    font-size: 14px;
+  }
+  .pyramid-box .info {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
-  .level-1 .pyramid-box { width: 120px; height: 60px; }
+  .level-1 .pyramid-box { width: 120px; }
   .level-2 .pyramid-box { width: 140px; }
   .level-3 .pyramid-box { width: 160px; }
   .level-4 .pyramid-box { width: 180px; }
   .level-5 .pyramid-box { width: 200px; }
-  .hover-info { font-size: 12px; padding: 6px 8px; }
+
+  .pyramid-box h3 {
+    font-size: 13px;
+  }
+  .pyramid-box .info {
+    font-size: 11px;
+  }
 }
+

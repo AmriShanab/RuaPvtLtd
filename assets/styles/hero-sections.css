@@ -44,13 +44,13 @@ body {
 
 .welcome-content {
   flex: 1;
-  padding: 0 60px;
+  padding: 0px 90px 0px 0px;
   text-align: center;
 }
 
 .welcome-left,
 .welcome-right {
-  flex: 0 0 100px;
+  flex: 0 0 10px;
 }
 
 .welcome-ornament {

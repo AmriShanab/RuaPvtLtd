@@ -1,4 +1,5 @@
 // Country data
+// Country data
 const countryData = {
   Australia: {
     title: "The Land Down Under!",
@@ -7,6 +8,186 @@ const countryData = {
     tuitionRange: [20000, 50000],
     currency: "AUD",
     universities: [
+      {
+        name: "RMIT",
+        logo: "assets/images/australia/rmit.png",
+        desc: "Ranked among top 200 universities globally",
+      },
+      {
+        name: "Deakin",
+        logo: "assets/images/australia/deakin.png",
+        desc: "Known for innovative teaching and research",
+      },
+      {
+        name: "Victoria",
+        logo: "assets/images/australia/victoria.png",
+        desc: "Industry-connected education in Melbourne",
+      },
+      {
+        name: "La Trobe",
+        logo: "assets/images/australia/la_trobe.png",
+        desc: "World-class research and teaching excellence",
+      },
+      {
+        name: "Monash",
+        logo: "assets/images/australia/monash.svg",
+        desc: "One of Australia's leading research universities",
+      },
+      {
+        name: "Southern Cross",
+        logo: "assets/images/australia/southern_cross.png",
+        desc: "Innovative learning with regional campuses",
+      },
+      {
+        name: "Torrens",
+        logo: "assets/images/australia/torrens.png",
+        desc: "Australia's international university",
+      },
+      {
+        name: "Uni of Canberra",
+        logo: "assets/images/australia/uni_of_canberra.png",
+        desc: "Practice-based education in the capital",
+      },
+      {
+        name: "Swinburne Uni",
+        logo: "assets/images/australia/swinburne.png",
+        desc: "Technology, innovation and industry engagement",
+      },
+      {
+        name: "Uni of Tasmania",
+        logo: "assets/images/australia/tasmania.jpg",
+        desc: "World-class research in a stunning location",
+      },
+      {
+        name: "University of Newcastle",
+        logo: "assets/images/australia/new_castle.png",
+        desc: "Industry leaders with global impact",
+      },
+      {
+        name: "Charles Sturt University",
+        logo: "assets/images/australia/charles_sturt.png",
+        desc: "Education for the professions since 1989",
+      },
+      {
+        name: "ECU",
+        logo: "assets/images/australia/ecu.jpg",
+        desc: "World-class teaching and research",
+      },
+      {
+        name: "Uni of Queensland",
+        logo: "assets/images/australia/queensland.png",
+        desc: "One of Australia's top research institutions",
+      },
+      {
+        name: "Australian Catholic Uni",
+        logo: "assets/images/australia/acu.png",
+        desc: "Integrating teaching, research and community",
+      },
+      {
+        name: "Murdoch Uni",
+        logo: "assets/images/australia/murdoch.png",
+        desc: "Free-thinking through innovative education",
+      },
+      {
+        name: "Curtin Uni",
+        logo: "assets/images/australia/curtin.jpg",
+        desc: "A global university with industry connections",
+      },
+      {
+        name: "Uni of Wollongong",
+        logo: "assets/images/australia/wollongong.jpg",
+        desc: "World-class education and research",
+      },
+      {
+        name: "RMIT",
+        logo: "assets/images/australia/rmit.png",
+        desc: "Ranked among top 200 universities globally",
+      },
+      {
+        name: "Deakin",
+        logo: "assets/images/australia/deakin.png",
+        desc: "Known for innovative teaching and research",
+      },
+      {
+        name: "Victoria",
+        logo: "assets/images/australia/victoria.png",
+        desc: "Industry-connected education in Melbourne",
+      },
+      {
+        name: "La Trobe",
+        logo: "assets/images/australia/la_trobe.png",
+        desc: "World-class research and teaching excellence",
+      },
+      {
+        name: "Monash",
+        logo: "assets/images/australia/monash.svg",
+        desc: "One of Australia's leading research universities",
+      },
+      {
+        name: "Southern Cross",
+        logo: "assets/images/australia/southern_cross.png",
+        desc: "Innovative learning with regional campuses",
+      },
+      {
+        name: "Torrens",
+        logo: "assets/images/australia/torrens.png",
+        desc: "Australia's international university",
+      },
+      {
+        name: "Uni of Canberra",
+        logo: "assets/images/australia/uni_of_canberra.png",
+        desc: "Practice-based education in the capital",
+      },
+      {
+        name: "Swinburne Uni",
+        logo: "assets/images/australia/swinburne.png",
+        desc: "Technology, innovation and industry engagement",
+      },
+      {
+        name: "Uni of Tasmania",
+        logo: "assets/images/australia/tasmania.jpg",
+        desc: "World-class research in a stunning location",
+      },
+      {
+        name: "University of Newcastle",
+        logo: "assets/images/australia/new_castle.png",
+        desc: "Industry leaders with global impact",
+      },
+      {
+        name: "Charles Sturt University",
+        logo: "assets/images/australia/charles_sturt.png",
+        desc: "Education for the professions since 1989",
+      },
+      {
+        name: "ECU",
+        logo: "assets/images/australia/ecu.jpg",
+        desc: "World-class teaching and research",
+      },
+      {
+        name: "Uni of Queensland",
+        logo: "assets/images/australia/queensland.png",
+        desc: "One of Australia's top research institutions",
+      },
+      {
+        name: "Australian Catholic Uni",
+        logo: "assets/images/australia/acu.png",
+        desc: "Integrating teaching, research and community",
+      },
+      {
+        name: "Murdoch Uni",
+        logo: "assets/images/australia/murdoch.png",
+        desc: "Free-thinking through innovative education",
+      },
+      {
+        name: "Curtin Uni",
+        logo: "assets/images/australia/curtin.jpg",
+        desc: "A global university with industry connections",
+      },
+      {
+        name: "Uni of Wollongong",
+        logo: "assets/images/australia/wollongong.jpg",
+        desc: "World-class education and research",
+      },
       {
         name: "RMIT",
         logo: "assets/images/australia/rmit.png",
@@ -133,6 +314,51 @@ const countryData = {
         logo: "assets/images/canada/mcgill.png",
         desc: "Canada's Harvard with international reputation",
       },
+      {
+        name: "University of Toronto",
+        logo: "assets/images/canada/toronto.png",
+        desc: "Ranked among the top universities globally",
+      },
+      {
+        name: "University of British Columbia",
+        logo: "assets/images/canada/ubc.png",
+        desc: "Beautiful campus with world-class programs",
+      },
+      {
+        name: "McGill University",
+        logo: "assets/images/canada/mcgill.png",
+        desc: "Canada's Harvard with international reputation",
+      },
+      {
+        name: "University of Toronto",
+        logo: "assets/images/canada/toronto.png",
+        desc: "Ranked among the top universities globally",
+      },
+      {
+        name: "University of British Columbia",
+        logo: "assets/images/canada/ubc.png",
+        desc: "Beautiful campus with world-class programs",
+      },
+      {
+        name: "McGill University",
+        logo: "assets/images/canada/mcgill.png",
+        desc: "Canada's Harvard with international reputation",
+      },
+      {
+        name: "University of Toronto",
+        logo: "assets/images/canada/toronto.png",
+        desc: "Ranked among the top universities globally",
+      },
+      {
+        name: "University of British Columbia",
+        logo: "assets/images/canada/ubc.png",
+        desc: "Beautiful campus with world-class programs",
+      },
+      {
+        name: "McGill University",
+        logo: "assets/images/canada/mcgill.png",
+        desc: "Canada's Harvard with international reputation",
+      },
     ],
     requirements: {
       undergraduate: "A/Ls with 3C passes",
@@ -160,6 +386,231 @@ ensures a welcoming home away from home.`,
     tuitionRange: [10800, 30000],
     currency: "GBP",
     universities: [
+      {
+        name: "University of East London (UEL)",
+        logo: "assets/images/uk/uel.png",
+        desc: "Career-focused education in London",
+      },
+      {
+        name: "Coventry University",
+        logo: "assets/images/uk/coventry.png",
+        desc: "Modern university with industry links",
+      },
+      {
+        name: "University of Bedfordshire",
+        logo: "assets/images/uk/beds.png",
+        desc: "Supportive environment for international students",
+      },
+      {
+        name: "University of Sunderland",
+        logo: "assets/images/uk/sunderland.png",
+        desc: "Practical learning with global opportunities",
+      },
+      {
+        name: "Teesside University",
+        logo: "assets/images/uk/teesside.png",
+        desc: "Known for digital innovation and research",
+      },
+      {
+        name: "Middlesex University London",
+        logo: "assets/images/uk/middlesex.png",
+        desc: "Diverse community with a global outlook",
+      },
+      {
+        name: "University of Hertfordshire",
+        logo: "assets/images/uk/hertfordshire.png",
+        desc: "Strong links with business and industry",
+      },
+      {
+        name: "University of Greenwich",
+        logo: "assets/images/uk/greenwich.png",
+        desc: "Beautiful riverside campus with rich history",
+      },
+      {
+        name: "University of South Wales",
+        logo: "assets/images/uk/southwales.png",
+        desc: "Career-focused courses and strong industry ties",
+      },
+      {
+        name: "London Metropolitan University",
+        logo: "assets/images/uk/londonmet.png",
+        desc: "Supportive teaching and real-world learning",
+      },
+      {
+        name: "University of West London (UWL)",
+        logo: "assets/images/uk/uwl.png",
+        desc: "Known as 'the career university'",
+      },
+      {
+        name: "Staffordshire University",
+        logo: "assets/images/uk/staffordshire.png",
+        desc: "Leading in digital technologies and esports",
+      },
+      {
+        name: "Birmingham City University (BCU)",
+        logo: "assets/images/uk/bcu.png",
+        desc: "Practice-based learning in the heart of Birmingham",
+      },
+      {
+        name: "De Montfort University (DMU)",
+        logo: "assets/images/uk/dmu.png",
+        desc: "Creative and innovative approach to teaching",
+      },
+      {
+        name: "University of Wolverhampton",
+        logo: "assets/images/uk/wolverhampton.png",
+        desc: "Known for professional education and research",
+      },
+      {
+        name: "University of East London (UEL)",
+        logo: "assets/images/uk/uel.png",
+        desc: "Career-focused education in London",
+      },
+      {
+        name: "Coventry University",
+        logo: "assets/images/uk/coventry.png",
+        desc: "Modern university with industry links",
+      },
+      {
+        name: "University of Bedfordshire",
+        logo: "assets/images/uk/beds.png",
+        desc: "Supportive environment for international students",
+      },
+      {
+        name: "University of Sunderland",
+        logo: "assets/images/uk/sunderland.png",
+        desc: "Practical learning with global opportunities",
+      },
+      {
+        name: "Teesside University",
+        logo: "assets/images/uk/teesside.png",
+        desc: "Known for digital innovation and research",
+      },
+      {
+        name: "Middlesex University London",
+        logo: "assets/images/uk/middlesex.png",
+        desc: "Diverse community with a global outlook",
+      },
+      {
+        name: "University of Hertfordshire",
+        logo: "assets/images/uk/hertfordshire.png",
+        desc: "Strong links with business and industry",
+      },
+      {
+        name: "University of Greenwich",
+        logo: "assets/images/uk/greenwich.png",
+        desc: "Beautiful riverside campus with rich history",
+      },
+      {
+        name: "University of South Wales",
+        logo: "assets/images/uk/southwales.png",
+        desc: "Career-focused courses and strong industry ties",
+      },
+      {
+        name: "London Metropolitan University",
+        logo: "assets/images/uk/londonmet.png",
+        desc: "Supportive teaching and real-world learning",
+      },
+      {
+        name: "University of West London (UWL)",
+        logo: "assets/images/uk/uwl.png",
+        desc: "Known as 'the career university'",
+      },
+      {
+        name: "Staffordshire University",
+        logo: "assets/images/uk/staffordshire.png",
+        desc: "Leading in digital technologies and esports",
+      },
+      {
+        name: "Birmingham City University (BCU)",
+        logo: "assets/images/uk/bcu.png",
+        desc: "Practice-based learning in the heart of Birmingham",
+      },
+      {
+        name: "De Montfort University (DMU)",
+        logo: "assets/images/uk/dmu.png",
+        desc: "Creative and innovative approach to teaching",
+      },
+      {
+        name: "University of Wolverhampton",
+        logo: "assets/images/uk/wolverhampton.png",
+        desc: "Known for professional education and research",
+      },
+      {
+        name: "University of East London (UEL)",
+        logo: "assets/images/uk/uel.png",
+        desc: "Career-focused education in London",
+      },
+      {
+        name: "Coventry University",
+        logo: "assets/images/uk/coventry.png",
+        desc: "Modern university with industry links",
+      },
+      {
+        name: "University of Bedfordshire",
+        logo: "assets/images/uk/beds.png",
+        desc: "Supportive environment for international students",
+      },
+      {
+        name: "University of Sunderland",
+        logo: "assets/images/uk/sunderland.png",
+        desc: "Practical learning with global opportunities",
+      },
+      {
+        name: "Teesside University",
+        logo: "assets/images/uk/teesside.png",
+        desc: "Known for digital innovation and research",
+      },
+      {
+        name: "Middlesex University London",
+        logo: "assets/images/uk/middlesex.png",
+        desc: "Diverse community with a global outlook",
+      },
+      {
+        name: "University of Hertfordshire",
+        logo: "assets/images/uk/hertfordshire.png",
+        desc: "Strong links with business and industry",
+      },
+      {
+        name: "University of Greenwich",
+        logo: "assets/images/uk/greenwich.png",
+        desc: "Beautiful riverside campus with rich history",
+      },
+      {
+        name: "University of South Wales",
+        logo: "assets/images/uk/southwales.png",
+        desc: "Career-focused courses and strong industry ties",
+      },
+      {
+        name: "London Metropolitan University",
+        logo: "assets/images/uk/londonmet.png",
+        desc: "Supportive teaching and real-world learning",
+      },
+      {
+        name: "University of West London (UWL)",
+        logo: "assets/images/uk/uwl.png",
+        desc: "Known as 'the career university'",
+      },
+      {
+        name: "Staffordshire University",
+        logo: "assets/images/uk/staffordshire.png",
+        desc: "Leading in digital technologies and esports",
+      },
+      {
+        name: "Birmingham City University (BCU)",
+        logo: "assets/images/uk/bcu.png",
+        desc: "Practice-based learning in the heart of Birmingham",
+      },
+      {
+        name: "De Montfort University (DMU)",
+        logo: "assets/images/uk/dmu.png",
+        desc: "Creative and innovative approach to teaching",
+      },
+      {
+        name: "University of Wolverhampton",
+        logo: "assets/images/uk/wolverhampton.png",
+        desc: "Known for professional education and research",
+      },
       {
         name: "University of East London (UEL)",
         logo: "assets/images/uk/uel.png",
@@ -314,6 +765,156 @@ enriching global experiences.`,
         logo: "assets/images/usa/texas.png",
         desc: "Innovative programs with industry connections",
       },
+      {
+        name: "University of South Florida",
+        logo: "assets/images/usa/usf.avif",
+        desc: "Research university with diverse programs",
+      },
+      {
+        name: "Illinois State University",
+        logo: "assets/images/usa/illinois.svg",
+        desc: "Comprehensive university with strong academics",
+      },
+      {
+        name: "Wichita State University",
+        logo: "assets/images/usa/wichitha.jpg",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Minnesota State University",
+        logo: "assets/images/usa/minnesota.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Kent State University",
+        logo: "assets/images/usa/kent.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Webster University",
+        logo: "assets/images/usa/webster_university.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Concordia University",
+        logo: "assets/images/usa/concordia-university-logo.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Eastern Michigan University",
+        logo: "assets/images/usa/eastern_michigan.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Troy University",
+        logo: "assets/images/usa/troy.webp",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Texas A&M University",
+        logo: "assets/images/usa/texas.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "University of South Florida",
+        logo: "assets/images/usa/usf.avif",
+        desc: "Research university with diverse programs",
+      },
+      {
+        name: "Illinois State University",
+        logo: "assets/images/usa/illinois.svg",
+        desc: "Comprehensive university with strong academics",
+      },
+      {
+        name: "Wichita State University",
+        logo: "assets/images/usa/wichitha.jpg",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Minnesota State University",
+        logo: "assets/images/usa/minnesota.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Kent State University",
+        logo: "assets/images/usa/kent.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Webster University",
+        logo: "assets/images/usa/webster_university.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Concordia University",
+        logo: "assets/images/usa/concordia-university-logo.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Eastern Michigan University",
+        logo: "assets/images/usa/eastern_michigan.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Troy University",
+        logo: "assets/images/usa/troy.webp",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Texas A&M University",
+        logo: "assets/images/usa/texas.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "University of South Florida",
+        logo: "assets/images/usa/usf.avif",
+        desc: "Research university with diverse programs",
+      },
+      {
+        name: "Illinois State University",
+        logo: "assets/images/usa/illinois.svg",
+        desc: "Comprehensive university with strong academics",
+      },
+      {
+        name: "Wichita State University",
+        logo: "assets/images/usa/wichitha.jpg",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Minnesota State University",
+        logo: "assets/images/usa/minnesota.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Kent State University",
+        logo: "assets/images/usa/kent.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Webster University",
+        logo: "assets/images/usa/webster_university.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Concordia University",
+        logo: "assets/images/usa/concordia-university-logo.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Eastern Michigan University",
+        logo: "assets/images/usa/eastern_michigan.png",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Troy University",
+        logo: "assets/images/usa/troy.webp",
+        desc: "Innovative programs with industry connections",
+      },
+      {
+        name: "Texas A&M University",
+        logo: "assets/images/usa/texas.png",
+        desc: "Innovative programs with industry connections",
+      },
     ],
     requirements: {
       undergraduate: "A/Ls with 3B passes and SAT/ACT",
@@ -335,6 +936,156 @@ enriching global experiences.`,
     tuitionRange: [20000, 35000],
     currency: "NZD",
     universities: [
+      {
+        name: "University of Auckland",
+        logo: "assets/images/nz/auckland.png",
+        desc: "New Zealand's leading university",
+      },
+      {
+        name: "University of Canterbury",
+        logo: "assets/images/nz/canterbury.png",
+        desc: "Engineering and science programs excellence",
+      },
+      {
+        name: "University of Otago",
+        logo: "assets/images/nz/otago.png",
+        desc: "Health sciences and research focus",
+      },
+      {
+        name: "Massey University",
+        logo: "assets/images/nz/massey.png",
+        desc: "Innovative research and distance learning leader",
+      },
+      {
+        name: "University of Waikato",
+        logo: "assets/images/nz/waikato.png",
+        desc: "Strong in management, education, and environmental sciences",
+      },
+      {
+        name: "Auckland University of Technology",
+        logo: "assets/images/nz/aut.png",
+        desc: "Focus on applied learning and industry connections",
+      },
+      {
+        name: "Toi Ohomai Institute of Technology",
+        logo: "assets/images/nz/toiohomai.png",
+        desc: "Practical vocational and technical education",
+      },
+      {
+        name: "Le Cordon Bleu",
+        logo: "assets/images/nz/lecordonbleu.png",
+        desc: "World-renowned culinary and hospitality school",
+      },
+      {
+        name: "Lincoln University",
+        logo: "assets/images/nz/lincoln.png",
+        desc: "Specialist in agriculture, land, and environmental studies",
+      },
+      {
+        name: "Southern Institute of Technology",
+        logo: "assets/images/nz/sit.png",
+        desc: "Affordable education with zero tuition fees option",
+      },
+      {
+        name: "University of Auckland",
+        logo: "assets/images/nz/auckland.png",
+        desc: "New Zealand's leading university",
+      },
+      {
+        name: "University of Canterbury",
+        logo: "assets/images/nz/canterbury.png",
+        desc: "Engineering and science programs excellence",
+      },
+      {
+        name: "University of Otago",
+        logo: "assets/images/nz/otago.png",
+        desc: "Health sciences and research focus",
+      },
+      {
+        name: "Massey University",
+        logo: "assets/images/nz/massey.png",
+        desc: "Innovative research and distance learning leader",
+      },
+      {
+        name: "University of Waikato",
+        logo: "assets/images/nz/waikato.png",
+        desc: "Strong in management, education, and environmental sciences",
+      },
+      {
+        name: "Auckland University of Technology",
+        logo: "assets/images/nz/aut.png",
+        desc: "Focus on applied learning and industry connections",
+      },
+      {
+        name: "Toi Ohomai Institute of Technology",
+        logo: "assets/images/nz/toiohomai.png",
+        desc: "Practical vocational and technical education",
+      },
+      {
+        name: "Le Cordon Bleu",
+        logo: "assets/images/nz/lecordonbleu.png",
+        desc: "World-renowned culinary and hospitality school",
+      },
+      {
+        name: "Lincoln University",
+        logo: "assets/images/nz/lincoln.png",
+        desc: "Specialist in agriculture, land, and environmental studies",
+      },
+      {
+        name: "Southern Institute of Technology",
+        logo: "assets/images/nz/sit.png",
+        desc: "Affordable education with zero tuition fees option",
+      },
+      {
+        name: "University of Auckland",
+        logo: "assets/images/nz/auckland.png",
+        desc: "New Zealand's leading university",
+      },
+      {
+        name: "University of Canterbury",
+        logo: "assets/images/nz/canterbury.png",
+        desc: "Engineering and science programs excellence",
+      },
+      {
+        name: "University of Otago",
+        logo: "assets/images/nz/otago.png",
+        desc: "Health sciences and research focus",
+      },
+      {
+        name: "Massey University",
+        logo: "assets/images/nz/massey.png",
+        desc: "Innovative research and distance learning leader",
+      },
+      {
+        name: "University of Waikato",
+        logo: "assets/images/nz/waikato.png",
+        desc: "Strong in management, education, and environmental sciences",
+      },
+      {
+        name: "Auckland University of Technology",
+        logo: "assets/images/nz/aut.png",
+        desc: "Focus on applied learning and industry connections",
+      },
+      {
+        name: "Toi Ohomai Institute of Technology",
+        logo: "assets/images/nz/toiohomai.png",
+        desc: "Practical vocational and technical education",
+      },
+      {
+        name: "Le Cordon Bleu",
+        logo: "assets/images/nz/lecordonbleu.png",
+        desc: "World-renowned culinary and hospitality school",
+      },
+      {
+        name: "Lincoln University",
+        logo: "assets/images/nz/lincoln.png",
+        desc: "Specialist in agriculture, land, and environmental studies",
+      },
+      {
+        name: "Southern Institute of Technology",
+        logo: "assets/images/nz/sit.png",
+        desc: "Affordable education with zero tuition fees option",
+      },
       {
         name: "University of Auckland",
         logo: "assets/images/nz/auckland.png",
@@ -438,6 +1189,81 @@ welcoming home away from home.`,
         logo: "assets/images/uae/heriotwatt.png",
         desc: "Scottish university with focus on business, engineering, and design",
       },
+      {
+        name: "Middlesex University Dubai",
+        logo: "assets/images/uae/middlesex.png",
+        desc: "UK education in the heart of Dubai",
+      },
+      {
+        name: "University of Wollongong Dubai",
+        logo: "assets/images/uae/wollongong.png",
+        desc: "Australian quality education in Dubai",
+      },
+      {
+        name: "De Montfort University Dubai",
+        logo: "assets/images/uae/demontfort.png",
+        desc: "British university offering global career opportunities",
+      },
+      {
+        name: "Curtin University Dubai",
+        logo: "assets/images/uae/curtin.png",
+        desc: "Australian university with Dubai campus",
+      },
+      {
+        name: "Heriot-Watt University Dubai",
+        logo: "assets/images/uae/heriotwatt.png",
+        desc: "Scottish university with focus on business, engineering, and design",
+      },
+      {
+        name: "Middlesex University Dubai",
+        logo: "assets/images/uae/middlesex.png",
+        desc: "UK education in the heart of Dubai",
+      },
+      {
+        name: "University of Wollongong Dubai",
+        logo: "assets/images/uae/wollongong.png",
+        desc: "Australian quality education in Dubai",
+      },
+      {
+        name: "De Montfort University Dubai",
+        logo: "assets/images/uae/demontfort.png",
+        desc: "British university offering global career opportunities",
+      },
+      {
+        name: "Curtin University Dubai",
+        logo: "assets/images/uae/curtin.png",
+        desc: "Australian university with Dubai campus",
+      },
+      {
+        name: "Heriot-Watt University Dubai",
+        logo: "assets/images/uae/heriotwatt.png",
+        desc: "Scottish university with focus on business, engineering, and design",
+      },
+      {
+        name: "Middlesex University Dubai",
+        logo: "assets/images/uae/middlesex.png",
+        desc: "UK education in the heart of Dubai",
+      },
+      {
+        name: "University of Wollongong Dubai",
+        logo: "assets/images/uae/wollongong.png",
+        desc: "Australian quality education in Dubai",
+      },
+      {
+        name: "De Montfort University Dubai",
+        logo: "assets/images/uae/demontfort.png",
+        desc: "British university offering global career opportunities",
+      },
+      {
+        name: "Curtin University Dubai",
+        logo: "assets/images/uae/curtin.png",
+        desc: "Australian university with Dubai campus",
+      },
+      {
+        name: "Heriot-Watt University Dubai",
+        logo: "assets/images/uae/heriotwatt.png",
+        desc: "Scottish university with focus on business, engineering, and design",
+      },
     ],
     requirements: {
       undergraduate: "A/Ls with 3C passes",
@@ -453,8 +1279,46 @@ welcoming home away from home.`,
     },
   },
 };
+// Pyramid information for all countries
+const pyramidInfo = {
+  Australia: {
+    livingCost: "Living Cost Per Year - AUD 29,710",
+    tuitionFee: "Tuition Fee - AUD 20,000 - AUD 50,000",
+    entryRequirements: "UG - A/Ls 3C passes / PG - 65% or more.",
+    englishProficiency: "IELTS or PTEs",
+    scholarships: "Scholarships Available"
+  },
+  "United Kingdom": {
+    livingCost: "Living Cost (For 9 months)- London GBP 13,347 / Outside London - GBP 10,224",
+    tuitionFee: "Tuition Fee - GBP 10,800 - GBP 30,000",
+    entryRequirements: "UG - A/Ls 3C passes / PG - 55% or more.",
+    englishProficiency: "IELTS or PTEs",
+    scholarships: "Scholarships Available"
+  },
+  "New Zealand": { // Fixed: Capital 'Z'
+    livingCost: "Living Cost Per Year - NZD 20,000",
+    tuitionFee: "Tuition Fee - NZD 20,000 - NZD 35,000",
+    entryRequirements: "UG - A/Ls 3C passes / PG - 65% or more.",
+    englishProficiency: "IELTS or PTEs",
+    scholarships: "Scholarships Available"
+  },
+  "Dubai, UAE": { // Match the URL parameter exactly
+    livingCost: "Living Cost Per Year - AED 3,000 - AED 5,000",
+    tuitionFee: "Tuition Fee - AED 50,000 - AED 100,000",
+    entryRequirements: "UG - A/Ls 3C passes / PG - 55% or more.",
+    englishProficiency: "IELTS or PTEs",
+    scholarships: "Scholarships Available"
+  },
+  "United States": { // Match the URL parameter
+    livingCost: "Living Cost Per Year - USD 12,000 - USD 15,000",
+    tuitionFee: "Tuition Fee - USD 25,000 - USD 45,000",
+    entryRequirements: "UG - A/Ls 3C passes / PG - 65% or more.",
+    englishProficiency: "IELTS or PTEs",
+    scholarships: "Scholarships Available"
+  }
+};
 
-// Global chart instances
+// Global carousel instance
 let carousel = null;
 
 // Initialize the page
@@ -463,15 +1327,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   let country = urlParams.get("destination");
 
-  // Default to Australia if no country specified or invalid country
+  // Default to Australia if invalid or missing
   if (!country || !countryData[country]) {
     country = "Australia";
   }
 
   // Initialize carousel
   carousel = new SmoothCarousel();
-  
-  // Update content with the selected country
+
+  // Update content for the selected country
   updateContent(country);
 });
 
@@ -492,13 +1356,13 @@ class SmoothCarousel {
   init() {
     this.attachEventListeners();
     this.updateButtonStates();
-    this.startAutoScroll(); // 🔥 start auto scrolling
+    this.startAutoScroll();
   }
   
   attachEventListeners() {
     this.prevBtn.addEventListener('click', () => this.scroll('prev'));
     this.nextBtn.addEventListener('click', () => this.scroll('next'));
-    
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.scroll('prev');
       if (e.key === 'ArrowRight') this.scroll('next');
@@ -509,13 +1373,8 @@ class SmoothCarousel {
     if (this.isScrolling) return;
     this.isScrolling = true;
 
-    const scrollAmount = this.cardWidth; // move 1 card at a time
-
-    if (direction === 'next') {
-      this.currentPosition -= scrollAmount;
-    } else {
-      this.currentPosition += scrollAmount;
-    }
+    const scrollAmount = this.cardWidth;
+    this.currentPosition += (direction === 'prev') ? scrollAmount : -scrollAmount;
 
     this.applyBoundaries();
     this.smoothScrollTo(this.currentPosition);
@@ -528,8 +1387,7 @@ class SmoothCarousel {
   
   applyBoundaries() {
     const cards = this.carousel.querySelectorAll('.uni-card');
-    const maxScroll = -((cards.length - 1) * this.cardWidth);
-    
+    const maxScroll = -((cards.length - 3) * this.cardWidth); // visible 3 cards
     if (this.currentPosition > 0) this.currentPosition = 0;
     if (this.currentPosition < maxScroll) this.currentPosition = maxScroll;
   }
@@ -541,19 +1399,15 @@ class SmoothCarousel {
   
   updateButtonStates() {
     const cards = this.carousel.querySelectorAll('.uni-card');
-    const maxScroll = -((cards.length - 1) * this.cardWidth);
-
     if (cards.length <= 3) {
       this.prevBtn.style.display = 'none';
       this.nextBtn.style.display = 'none';
       return;
     }
-
     this.prevBtn.style.display = 'flex';
     this.nextBtn.style.display = 'flex';
-
     this.prevBtn.disabled = this.currentPosition >= 0;
-    this.nextBtn.disabled = this.currentPosition <= maxScroll;
+    this.nextBtn.disabled = this.currentPosition <= -((cards.length - 3) * this.cardWidth);
   }
 
   reset() {
@@ -562,93 +1416,89 @@ class SmoothCarousel {
     this.updateButtonStates();
   }
 
-  // 🔥 Auto Scroll
   startAutoScroll() {
-    this.stopAutoScroll(); // avoid duplicates
+    this.stopAutoScroll();
     this.autoScrollInterval = setInterval(() => {
       const cards = this.carousel.querySelectorAll('.uni-card');
-      const maxScroll = -((cards.length - 1) * this.cardWidth);
-
+      const maxScroll = -((cards.length - 3) * this.cardWidth);
       if (this.currentPosition <= maxScroll) {
-        this.currentPosition = 0; // reset to start
+        this.currentPosition = 0;
       } else {
-        this.currentPosition -= 1; // move 1px slowly
+        this.currentPosition -= 1;
       }
-
       this.carousel.style.transition = "transform 0.05s linear";
       this.carousel.style.transform = `translateX(${this.currentPosition}px)`;
-    }, 30); // smaller = faster
+    }, 30);
   }
 
   stopAutoScroll() {
-    if (this.autoScrollInterval) {
-      clearInterval(this.autoScrollInterval);
-      this.autoScrollInterval = null;
-    }
+    if (this.autoScrollInterval) clearInterval(this.autoScrollInterval);
+    this.autoScrollInterval = null;
   }
 }
 
 // Update page content based on country
 function updateContent(country) {
+  console.log("Updating content for country:", country);
   const data = countryData[country];
+  if (!data) {
+    console.error("Country data not found:", country);
+    return;
+  }
+console.log("Country data found:", data);
+  console.log("Pyramid data:", pyramidInfo[country]);
+  console.log("Updating pyramid for:", country, data);
 
-  // Update headings and descriptions
+  // Headings
   document.getElementById("main-heading").textContent = data.title;
   document.getElementById("sub-heading").textContent = `Study in ${country}`;
   document.getElementById("country-description").textContent = data.description;
 
-  // Update universities
-  const universitiesContainer = document.getElementById(
-    "universities-container"
-  );
-  universitiesContainer.innerHTML = "";
-
-  data.universities.forEach((uni) => {
-    const uniCard = document.createElement("div");
-    uniCard.className = "uni-card";
-    uniCard.innerHTML = `
-            <div class="logo-container">
-                <img src="${uni.logo}" alt="${uni.name} logo" class="uni-logo" onerror="this.src='assets/images/default-uni.png'">
-            </div>
-            <h3 class="uni-name">${uni.name}</h3>
-            <p class="uni-desc">${uni.desc}</p>
-        `;
-    universitiesContainer.appendChild(uniCard);
+  // Universities
+  const container = document.getElementById("universities-container");
+  container.innerHTML = "";
+  data.universities.forEach(uni => {
+    const card = document.createElement("div");
+    card.className = "uni-card";
+    card.innerHTML = `
+      <div class="logo-container">
+        <img src="${uni.logo}" alt="${uni.name} logo" class="uni-logo"
+             onerror="this.src='assets/images/default-uni.png'">
+      </div>
+      <h3 class="uni-name">${uni.name}</h3>
+      <p class="uni-desc">${uni.desc}</p>
+    `;
+    container.appendChild(card);
   });
 
-  // Update university status text
-  document.getElementById(
-    "uni-status"
-  ).textContent = `Showing ${data.universities.length} universities in ${country}`;
+  // document.getElementById("uni-status").textContent =
+  //   `Showing ${data.universities.length} universities in ${country}`;
 
-  // Reset carousel position
-  if (carousel) {
-    carousel.reset();
-  }
+  // Reset carousel
+  if (carousel) carousel.reset();
 
-  // Update pyramid boxes with country-specific data
-  updatePyramid(data);
+  // Update pyramid
+  updatePyramid(country);
 }
 
-// Update pyramid boxes with country-specific data
-function updatePyramid(data) {
-  // Box 1: Living Cost
-  document.getElementById("box1").querySelector(".hover-info").textContent = 
-    `Living Cost Per Year - ${data.currency} ${data.livingCost.toLocaleString()}`;
+// Update pyramid boxes with country-specific data from pyramidInfo
+function updatePyramid(country) {
+  const pyramidData = pyramidInfo[country];
   
-  // Box 2: Tuition Fee
-  document.getElementById("box2").querySelector(".hover-info").textContent = 
-    `Tuition Fee - ${data.currency} ${data.tuitionRange[0].toLocaleString()} - ${data.tuitionRange[1].toLocaleString()}`;
-  
-  // Box 3: Entry Requirements
-  document.getElementById("box3").querySelector(".hover-info").textContent = 
-    `UG - ${data.requirements.undergraduate} / PG - ${data.requirements.postgraduate}`;
-  
-  // Box 4: English Proficiency
-  document.getElementById("box4").querySelector(".hover-info").textContent = 
-    data.requirements.english;
-  
-  // Box 5: Scholarships
-  document.getElementById("box5").querySelector(".hover-info").textContent = 
-    data.requirements.scholarships;
+  if (!pyramidData) {
+    console.error("Pyramid data not found for country:", country);
+    // Set default values or show error message
+    document.getElementById("box1").querySelector(".info").textContent = "Data not available";
+    document.getElementById("box2").querySelector(".info").textContent = "Data not available";
+    document.getElementById("box3").querySelector(".info").textContent = "Data not available";
+    document.getElementById("box4").querySelector(".info").textContent = "Data not available";
+    document.getElementById("box5").querySelector(".info").textContent = "Data not available";
+    return;
+  }
+
+  document.getElementById("box1").querySelector(".info").textContent = pyramidData.livingCost;
+  document.getElementById("box2").querySelector(".info").textContent = pyramidData.tuitionFee;
+  document.getElementById("box3").querySelector(".info").textContent = pyramidData.entryRequirements;
+  document.getElementById("box4").querySelector(".info").textContent = pyramidData.englishProficiency;
+  document.getElementById("box5").querySelector(".info").textContent = pyramidData.scholarships;
 }
