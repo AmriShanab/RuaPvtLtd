@@ -15,8 +15,17 @@ include 'navbar.php';
     <div class="hero-section">
         <video autoplay muted loop playsinline class="hero-video">
             <!-- Primary video source -->
-            <source src="assets/videos/sample_background.mp4" type="video/mp4">
-
+            <source src="assets/videos/Rua El oud.mp4" type="video/mp4" id="indexVideo">
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var videoSource = document.getElementById("indexVideo");
+                if (window.innerWidth <= 768) {
+                    videoSource.src = "assets/videos/Rua El oud mobile.mp4";
+                    // Reload video to apply new source
+                    videoSource.parentElement.load();
+                }
+            });
+            </script>
             <!-- Fallback video source -->
             <source src="https://pixabay.com/videos/download/video-45707_large.mp4" type="video/mp4">
 
@@ -24,8 +33,8 @@ include 'navbar.php';
             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80" alt="Luxury gold texture">
         </video>
         <div class="hero-content">
-            <h1 class="cinzel-font">WELCOME TO RUA EL OUD</h1>
-            <p>Discover Our World of Refined Experiences</p>
+            <!-- <h1 class="cinzel-font">WELCOME TO RUA EL OUD</h1>
+            <p>Discover Our World of Refined Experiences</p> -->
         </div>
     </div>
 
