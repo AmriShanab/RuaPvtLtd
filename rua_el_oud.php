@@ -20,7 +20,7 @@ include 'navbar.php';
             document.addEventListener("DOMContentLoaded", function() {
                 var videoSource = document.getElementById("indexVideo");
                 if (window.innerWidth <= 768) {
-                    videoSource.src = "assets/videos/Rua El oud mobile.mp4";
+                    videoSource.src = "assets/videos/Rua El oud mobile Size Reduced.mp4";
                     // Reload video to apply new source
                     videoSource.parentElement.load();
                 }

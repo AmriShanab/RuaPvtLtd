@@ -276,7 +276,7 @@ include 'navbar.php'
             document.addEventListener("DOMContentLoaded", function() {
                 var videoSource = document.getElementById("indexVideo");
                 if (window.innerWidth <= 768) {
-                    videoSource.src = "assets/videos/Rua Recreation moblie.mp4";
+                    videoSource.src = "assets/videos/Rua Recreation moblie size reduced .mp4";
                     // Reload video to apply new source
                     videoSource.parentElement.load();
                 }
